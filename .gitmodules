@@ -1,0 +1,3 @@
+[submodule "game-ai"]
+	path = game-ai
+	url = https://github.com/dvavryn/crackmania-api

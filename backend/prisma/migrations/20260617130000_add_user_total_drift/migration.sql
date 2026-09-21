@@ -1,0 +1,2 @@
+-- AddColumn
+ALTER TABLE "users" ADD COLUMN "totalDriftM" INTEGER NOT NULL DEFAULT 0;

@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@400;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--color-white);
+  --color-surface: var(--color-light-white);
+  --color-surface-invert: var(--color-light-black);
+  --color-accent: var(--color-dark-red);
+  --color-success: var(--color-green);
+  --color-danger: var(--color-red);
+  --color-border: var(--color-dark-red);
+  --color-text: var(--color-black);
+  --color-muted: var(--color-grey);
+  --color-text-strong: var(--color-black);
+  --color-input-text: var(--color-light-black);
+
+  --font-display: "Bebas Neue", sans-serif;
+  --font-body: "Barlow", sans-serif;
+  --font-condensed: "Barlow Condensed", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --animate-fade-up: ck-fade-up 0.6s ease forwards;
+
+  /* New color variables */
+  /* light theme will be white, blue300, red100, pink */
+  /* dark theme will be blue100, blue200, red100, purple100, purple200*/
+  /* rest of the colors are for both themes */
+  --color-white: #eae4e4;
+  --color-light-white: #f8f2f2;
+  --color-black: #000000;
+  --color-light-black: #15161c;
+  --color-dark-blue: #0c162d;
+  --color-blue: #102147;
+  --color-light-blue: #b0deeb;
+  --color-dark-red: #a80100;
+  --color-red: #ff3344;
+  --color-pink: #e7b4bf;
+  --color-lavender: #69476c;
+  --color-purple: #453150;
+  --color-brown: #c8a589;
+  --color-dark-grey: #28292f;
+  --color-grey: #56585b;
+  --color-light-grey: #9b968b;
+  --color-green: #60ca78;
+}
+
+:root {
+  --accent: var(--color-accent);
+  --bg: var(--color-bg);
+  --surface: var(--color-surface);
+  --surface-invert: var(--color-surface-invert);
+  --success: var(--color-success);
+  --danger: var(--color-danger);
+  --border: var(--color-border);
+  --text: var(--color-text);
+  --muted: var(--color-muted);
+  --text-strong: var(--color-text-strong);
+
+  /* ---- 3D game world colours (read by game/src/theme.ts) ------------- */
+  /* Keyed by scheme NAME (default / dark) rather than the .dark class so   */
+  /* the game can pick a set deterministically — ThemeProvider toggles the  */
+  /* .dark class in a parent effect that runs AFTER the game reads these,   */
+  /* so a class-scoped lookup would be a frame stale. theme.ts resolves     */
+  /* each of these to a Three.js colour number at runtime; edit here to     */
+  /* recolour the world without touching the game source.                   */
+  --game-default-floor: var(--color-white);
+  --game-default-wall: var(--color-dark-red);
+  --game-default-sky: var(--color-light-blue);
+  --game-default-fog: var(--color-white);
+  --game-default-skidmark: var(--color-light-black);
+  --game-default-mm-road: var(--color-light-black);
+  --game-default-mm-road-outline: var(--color-dark-red);
+  --game-default-mm-player: var(--color-light-white);
+  --game-default-mm-dot-outline: var(--color-dark-red);
+  --game-default-mm-bot: var(--color-pink);
+  --game-default-mm-remote: var(--color-pink);
+  --game-default-mm-border: var(--color-dark-red);
+
+  --game-dark-floor: var(--color-dark-grey);
+  --game-dark-wall: var(--color-red);
+  --game-dark-sky: var(--color-blue);
+  --game-dark-fog: var(--color-dark-blue);
+  --game-dark-skidmark: var(--color-light-white);
+  --game-dark-mm-road: var(--color-white);
+  --game-dark-mm-road-outline: var(--color-dark-red);
+  --game-dark-mm-player: var(--color-light-white);
+  --game-dark-mm-dot-outline: var(--color-light-black);
+  --game-dark-mm-bot: var(--color-light-blue);
+  --game-dark-mm-remote: var(--color-light-blue);
+  --game-dark-mm-border: var(--color-dark-red);
+}
+
+.dark {
+  --color-bg: var(--color-dark-blue);
+  --color-surface: var(--color-blue);
+  --color-surface-invert: var(--color-black);
+  --color-text: var(--color-white);
+  --color-muted: var(--color-light-grey);
+  --color-text-strong: var(--color-light-white);
+  --color-input-text: var(--color-white);
+  --color-accent: var(--color-red);
+}
+
+/* ↓ @layer base sits BELOW @layer utilities in the cascade.        */
+/* Tailwind Preflight already resets margin/padding — we only add   */
+/* the things Preflight doesn't cover (body bg, scrollbar, fonts).  */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border-radius: 2px;
+  }
+}
+
+@keyframes ck-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+  }
+}

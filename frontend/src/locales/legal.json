@@ -1,0 +1,571 @@
+{
+  "privacy": {
+    "en": {
+      "eyebrow": "Legal · プライバシー",
+      "title": "Privacy Policy",
+      "subtitle": "How Sakura Drift collects, uses, and protects the data tied to your account and your races.",
+      "updated": "Last updated: June 2026",
+      "backToHome": "← Back to home",
+      "footer": "Sakura Drift · 桜ドリフト",
+      "sections": [
+        {
+          "h": "Overview",
+          "body": [
+            "Sakura Drift is an online multiplayer racing game. This policy explains what information we handle when you create an account and play, why we handle it, and the choices you have. It applies to the game client and the services behind it.",
+            "Sakura Drift is an academic project. We aim to keep data handling minimal and transparent, and to collect only what the game needs to function."
+          ]
+        },
+        {
+          "h": "Information we collect",
+          "body": [
+            "We collect only what is needed to run your account and the game:"
+          ],
+          "list": [
+            "Account data — your email address, username, and a securely hashed password. We never store your password in plain text.",
+            "Gameplay data — race results, lap times, finishing positions, and the stats and leaderboard entries derived from them.",
+            "Social data — your friends list and the messages you send through in-game chat.",
+            "Technical data — your authentication session, locally stored preferences such as theme and language, and server logs (including IP address) kept for security and abuse prevention."
+          ]
+        },
+        {
+          "h": "How we use your information",
+          "body": ["We use the data above to:"],
+          "list": [
+            "authenticate you and keep your session secure;",
+            "run core gameplay — races, lobbies, stats, and leaderboards;",
+            "power social features such as friends and chat;",
+            "protect the service against abuse, cheating, and attacks;",
+            "diagnose problems and improve the game."
+          ]
+        },
+        {
+          "h": "Cookies and local storage",
+          "body": [
+            "We use a session token to keep you signed in, and your browser\u2019s local storage to remember preferences like your theme and language. These are required for the game to work the way you expect.",
+            "We do not use third-party advertising or tracking cookies."
+          ]
+        },
+        {
+          "h": "How we store and protect your data",
+          "body": [
+            "Passwords are stored only as salted hashes. Traffic to the service passes through a web application firewall, and application secrets are managed in a dedicated secrets store rather than in code or configuration.",
+            "No system is perfectly secure, but we take reasonable measures to protect your data and limit who can access it."
+          ]
+        },
+        {
+          "h": "Sharing your information",
+          "body": [
+            "We do not sell your data. We share it only where necessary to operate the service (for example, with infrastructure providers that host the game) or where we are legally required to do so."
+          ]
+        },
+        {
+          "h": "Data retention",
+          "body": [
+            "We keep your account data for as long as your account is active. When you delete your account, your personal data is removed, except where short-term retention of limited records is necessary for security or to meet a legal obligation."
+          ]
+        },
+        {
+          "h": "Your rights",
+          "body": [
+            "Depending on where you live, you may have the right to access, correct, export, or delete your personal data, and to object to or restrict certain processing.",
+            "You can manage much of this from your account settings. For anything else, contact us using the details below and we will respond within a reasonable time."
+          ]
+        },
+        {
+          "h": "Age requirement",
+          "body": [
+            "Sakura Drift is not directed at children below the minimum age required for consent in their country. By creating an account you confirm you meet that age requirement."
+          ]
+        },
+        {
+          "h": "Changes to this policy",
+          "body": [
+            "We may update this policy from time to time. The date at the top reflects the latest version, and we will make reasonable efforts to flag material changes."
+          ]
+        },
+        {
+          "h": "Contact",
+          "body": [
+            "Questions about this policy or your data? Reach the team at hanjkim@student.42vienna.com or through the project repository."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "eyebrow": "Rechtliches · プライバシー",
+      "title": "Datenschutzerklärung",
+      "subtitle": "Wie Sakura Drift die mit deinem Konto und deinen Rennen verbundenen Daten erhebt, nutzt und schützt.",
+      "updated": "Zuletzt aktualisiert: Juni 2026",
+      "backToHome": "← Zurück zur Startseite",
+      "footer": "Sakura Drift · 桜ドリフト",
+      "sections": [
+        {
+          "h": "Überblick",
+          "body": [
+            "Sakura Drift ist ein Online-Multiplayer-Rennspiel. Diese Erklärung beschreibt, welche Informationen wir verarbeiten, wenn du ein Konto erstellst und spielst, warum wir sie verarbeiten und welche Möglichkeiten du hast. Sie gilt für den Spiel-Client und die dahinterliegenden Dienste.",
+            "Sakura Drift ist ein akademisches Projekt. Wir möchten die Datenverarbeitung minimal und transparent halten und nur erheben, was das Spiel zum Funktionieren benötigt."
+          ]
+        },
+        {
+          "h": "Informationen, die wir erheben",
+          "body": [
+            "Wir erheben nur, was für dein Konto und das Spiel nötig ist:"
+          ],
+          "list": [
+            "Kontodaten — deine E-Mail-Adresse, deinen Benutzernamen und ein sicher gehashtes Passwort. Wir speichern dein Passwort niemals im Klartext.",
+            "Spieldaten — Rennergebnisse, Rundenzeiten, Platzierungen sowie die daraus abgeleiteten Statistiken und Ranglisteneinträge.",
+            "Soziale Daten — deine Freundesliste und die Nachrichten, die du über den In-Game-Chat sendest.",
+            "Technische Daten — deine Authentifizierungssitzung, lokal gespeicherte Einstellungen wie Design und Sprache sowie Serverprotokolle (einschließlich IP-Adresse), die zur Sicherheit und Missbrauchsverhinderung aufbewahrt werden."
+          ]
+        },
+        {
+          "h": "Wie wir deine Informationen verwenden",
+          "body": ["Wir nutzen die obigen Daten, um:"],
+          "list": [
+            "dich zu authentifizieren und deine Sitzung sicher zu halten;",
+            "das Kerngameplay zu betreiben — Rennen, Lobbys, Statistiken und Ranglisten;",
+            "soziale Funktionen wie Freunde und Chat zu ermöglichen;",
+            "den Dienst vor Missbrauch, Cheating und Angriffen zu schützen;",
+            "Probleme zu diagnostizieren und das Spiel zu verbessern."
+          ]
+        },
+        {
+          "h": "Cookies und lokaler Speicher",
+          "body": [
+            "Wir verwenden ein Sitzungs-Token, um dich angemeldet zu halten, und den lokalen Speicher deines Browsers, um Einstellungen wie Design und Sprache zu merken. Diese sind erforderlich, damit das Spiel wie erwartet funktioniert.",
+            "Wir verwenden keine Werbe- oder Tracking-Cookies von Drittanbietern."
+          ]
+        },
+        {
+          "h": "Wie wir deine Daten speichern und schützen",
+          "body": [
+            "Passwörter werden nur als gesalzene Hashes gespeichert. Der Datenverkehr zum Dienst läuft über eine Web Application Firewall, und Anwendungsgeheimnisse werden in einem dedizierten Secrets-Store statt im Code oder in der Konfiguration verwaltet.",
+            "Kein System ist vollkommen sicher, aber wir treffen angemessene Maßnahmen, um deine Daten zu schützen und den Zugriff zu begrenzen."
+          ]
+        },
+        {
+          "h": "Weitergabe deiner Informationen",
+          "body": [
+            "Wir verkaufen deine Daten nicht. Wir geben sie nur weiter, wo es für den Betrieb des Dienstes nötig ist (zum Beispiel an Infrastrukturanbieter, die das Spiel hosten) oder wo wir gesetzlich dazu verpflichtet sind."
+          ]
+        },
+        {
+          "h": "Speicherdauer",
+          "body": [
+            "Wir bewahren deine Kontodaten auf, solange dein Konto aktiv ist. Wenn du dein Konto löschst, werden deine personenbezogenen Daten entfernt, außer wenn eine kurzfristige Aufbewahrung begrenzter Aufzeichnungen aus Sicherheitsgründen oder zur Erfüllung einer gesetzlichen Pflicht erforderlich ist."
+          ]
+        },
+        {
+          "h": "Deine Rechte",
+          "body": [
+            "Je nach Wohnort hast du möglicherweise das Recht, auf deine personenbezogenen Daten zuzugreifen, sie zu berichtigen, zu exportieren oder zu löschen sowie bestimmten Verarbeitungen zu widersprechen oder sie einzuschränken.",
+            "Vieles davon kannst du in deinen Kontoeinstellungen verwalten. Für alles Weitere kontaktiere uns über die unten stehenden Angaben; wir antworten innerhalb einer angemessenen Frist."
+          ]
+        },
+        {
+          "h": "Altersanforderung",
+          "body": [
+            "Sakura Drift richtet sich nicht an Kinder unterhalb des in ihrem Land geltenden Mindestalters für die Einwilligung. Mit der Erstellung eines Kontos bestätigst du, dass du diese Altersanforderung erfüllst."
+          ]
+        },
+        {
+          "h": "Änderungen dieser Erklärung",
+          "body": [
+            "Wir können diese Erklärung von Zeit zu Zeit aktualisieren. Das Datum oben gibt die aktuellste Version wieder, und wir bemühen uns nach Kräften, auf wesentliche Änderungen hinzuweisen."
+          ]
+        },
+        {
+          "h": "Kontakt",
+          "body": [
+            "Fragen zu dieser Erklärung oder deinen Daten? Erreiche das Team unter hanjkim@student.42vienna.com oder über das Projekt-Repository."
+          ]
+        }
+      ]
+    },
+    "ja": {
+      "eyebrow": "法的事項 · プライバシー",
+      "title": "プライバシーポリシー",
+      "subtitle": "Sakura Driftが、あなたのアカウントとレースに紐づくデータをどのように収集・利用・保護するか。",
+      "updated": "最終更新：2026年6月",
+      "backToHome": "← ホームに戻る",
+      "footer": "Sakura Drift · 桜ドリフト",
+      "sections": [
+        {
+          "h": "概要",
+          "body": [
+            "Sakura Driftはオンラインのマルチプレイヤー・レーシングゲームです。本ポリシーは、アカウント作成やプレイの際に当方が扱う情報、その目的、そしてあなたが選べる選択肢について説明します。ゲームクライアントおよびその背後のサービスに適用されます。",
+            "Sakura Driftは学術プロジェクトです。データの取り扱いは最小限かつ透明に保ち、ゲームの動作に必要なものだけを収集することを目指しています。"
+          ]
+        },
+        {
+          "h": "収集する情報",
+          "body": ["アカウントとゲームの運用に必要なものだけを収集します："],
+          "list": [
+            "アカウント情報 — メールアドレス、ユーザー名、安全にハッシュ化されたパスワード。パスワードを平文で保存することは決してありません。",
+            "ゲームプレイ情報 — レース結果、ラップタイム、順位、およびそれらから算出される統計やリーダーボードの記録。",
+            "ソーシャル情報 — フレンドリストと、ゲーム内チャットで送信するメッセージ。",
+            "技術情報 — 認証セッション、テーマや言語などローカルに保存される設定、ならびにセキュリティと不正防止のために保持されるサーバーログ（IPアドレスを含む）。"
+          ]
+        },
+        {
+          "h": "情報の利用方法",
+          "body": ["上記のデータは次の目的で利用します："],
+          "list": [
+            "あなたを認証し、セッションを安全に保つため；",
+            "中核となるゲームプレイ（レース、ロビー、統計、リーダーボード）を運用するため；",
+            "フレンドやチャットなどのソーシャル機能を提供するため；",
+            "不正利用、チート、攻撃からサービスを保護するため；",
+            "問題を診断し、ゲームを改善するため。"
+          ]
+        },
+        {
+          "h": "Cookieとローカルストレージ",
+          "body": [
+            "サインイン状態を維持するためのセッショントークンと、テーマや言語などの設定を記憶するためのブラウザのローカルストレージを使用します。これらはゲームを期待どおりに動作させるために必要です。",
+            "第三者による広告・トラッキング用のCookieは使用しません。"
+          ]
+        },
+        {
+          "h": "データの保存と保護",
+          "body": [
+            "パスワードはソルト付きハッシュとしてのみ保存されます。サービスへの通信はWebアプリケーションファイアウォールを通過し、アプリケーションの機密情報はコードや設定ではなく専用のシークレットストアで管理されます。",
+            "完全に安全なシステムは存在しませんが、データを保護しアクセスを制限するために合理的な対策を講じています。"
+          ]
+        },
+        {
+          "h": "情報の共有",
+          "body": [
+            "当方はあなたのデータを販売しません。サービスの運用に必要な場合（例：ゲームをホストするインフラ事業者）や、法令で義務付けられる場合に限り共有します。"
+          ]
+        },
+        {
+          "h": "データの保持",
+          "body": [
+            "アカウントが有効な間、アカウント情報を保持します。アカウントを削除すると個人データは削除されますが、セキュリティ上または法的義務の履行のために限定的な記録を短期間保持する必要がある場合を除きます。"
+          ]
+        },
+        {
+          "h": "あなたの権利",
+          "body": [
+            "お住まいの地域によっては、個人データへのアクセス、訂正、エクスポート、削除を求める権利や、特定の処理に異議を唱えたり制限したりする権利を有する場合があります。",
+            "その多くはアカウント設定から管理できます。その他については下記の連絡先までご連絡いただければ、合理的な期間内に対応します。"
+          ]
+        },
+        {
+          "h": "年齢要件",
+          "body": [
+            "Sakura Driftは、各国で同意に必要とされる最低年齢に満たない子どもを対象としていません。アカウントを作成することで、その年齢要件を満たしていることを確認したものとみなされます。"
+          ]
+        },
+        {
+          "h": "本ポリシーの変更",
+          "body": [
+            "本ポリシーは随時更新されることがあります。上部の日付は最新版を示しており、重要な変更については合理的な範囲で告知するよう努めます。"
+          ]
+        },
+        {
+          "h": "お問い合わせ",
+          "body": [
+            "本ポリシーやデータに関するご質問は、hanjkim@student.42vienna.com またはプロジェクトのリポジトリからチームまでご連絡ください。"
+          ]
+        }
+      ]
+    }
+  },
+  "terms": {
+    "en": {
+      "eyebrow": "Legal · 利用規約",
+      "title": "Terms of Service",
+      "subtitle": "The rules of the road for using Sakura Drift. By playing, you agree to these terms.",
+      "updated": "Last updated: June 2026",
+      "backToHome": "← Back to home",
+      "footer": "Sakura Drift · 桜ドリフト",
+      "sections": [
+        {
+          "h": "Acceptance of terms",
+          "body": [
+            "By creating an account or otherwise using Sakura Drift, you agree to these Terms of Service. If you do not agree, please do not use the game.",
+            "Sakura Drift is an academic project and is provided for non-commercial use."
+          ]
+        },
+        {
+          "h": "Eligibility",
+          "body": [
+            "You must meet the minimum age required for consent in your country to use Sakura Drift, and the information you provide when registering must be accurate."
+          ]
+        },
+        {
+          "h": "Your account",
+          "body": [
+            "You are responsible for activity on your account and for keeping your password confidential. Maintain a single account for yourself, do not share credentials, and notify us promptly if you believe your account has been compromised."
+          ]
+        },
+        {
+          "h": "Acceptable use",
+          "body": [
+            "To keep the game fair and welcoming for everyone, you agree not to:"
+          ],
+          "list": [
+            "cheat, exploit bugs, or use bots, scripts, or modified clients to gain an advantage;",
+            "harass, threaten, or abuse other players in chat or anywhere else in the game;",
+            "impersonate other players, staff, or anyone else;",
+            "scrape, copy, or harvest data from the service;",
+            "probe, attack, overload, or attempt to gain unauthorized access to the service or its infrastructure;",
+            "reverse engineer or circumvent the game\u2019s security measures."
+          ]
+        },
+        {
+          "h": "User content",
+          "body": [
+            "You are responsible for the content you create, including chat messages and your chosen username. You grant us a limited license to store and display that content as needed to operate the game.",
+            "We may remove content or restrict accounts that violate these terms."
+          ]
+        },
+        {
+          "h": "Intellectual property",
+          "body": [
+            "The game, including its code, artwork, music, and branding, belongs to its creators. You receive a limited, personal, non-transferable license to play. You may not copy, redistribute, or create derivative works from it without permission."
+          ]
+        },
+        {
+          "h": "Service availability",
+          "body": [
+            "Sakura Drift is provided on an \u201cas is\u201d and \u201cas available\u201d basis. As an academic project, it may experience downtime, and we may change, suspend, or discontinue features at any time."
+          ]
+        },
+        {
+          "h": "Disclaimers",
+          "body": [
+            "To the fullest extent permitted by law, the game is provided without warranties of any kind, whether express or implied, including fitness for a particular purpose and uninterrupted or error-free operation."
+          ]
+        },
+        {
+          "h": "Limitation of liability",
+          "body": [
+            "To the fullest extent permitted by law, the creators of Sakura Drift are not liable for any indirect, incidental, or consequential damages arising from your use of, or inability to use, the game."
+          ]
+        },
+        {
+          "h": "Suspension and termination",
+          "body": [
+            "We may suspend or terminate access for accounts that violate these terms or put the service or other players at risk. You may delete your account at any time from your account settings."
+          ]
+        },
+        {
+          "h": "Governing law",
+          "body": [
+            "These terms are governed by the laws applicable where the service is operated [insert jurisdiction], without regard to conflict-of-law rules."
+          ]
+        },
+        {
+          "h": "Changes to these terms",
+          "body": [
+            "We may update these terms from time to time. The date at the top reflects the latest version, and continued use of the game after changes take effect means you accept the updated terms."
+          ]
+        },
+        {
+          "h": "Contact",
+          "body": [
+            "Questions about these terms? Reach the team at hanjkim@student.42vienna.com or through the project repository."
+          ]
+        }
+      ]
+    },
+    "de": {
+      "eyebrow": "Rechtliches · 利用規約",
+      "title": "Nutzungsbedingungen",
+      "subtitle": "Die Spielregeln für die Nutzung von Sakura Drift. Mit dem Spielen stimmst du diesen Bedingungen zu.",
+      "updated": "Zuletzt aktualisiert: Juni 2026",
+      "backToHome": "← Zurück zur Startseite",
+      "footer": "Sakura Drift · 桜ドリフト",
+      "sections": [
+        {
+          "h": "Annahme der Bedingungen",
+          "body": [
+            "Indem du ein Konto erstellst oder Sakura Drift anderweitig nutzt, stimmst du diesen Nutzungsbedingungen zu. Wenn du nicht einverstanden bist, nutze das Spiel bitte nicht.",
+            "Sakura Drift ist ein akademisches Projekt und wird für die nicht-kommerzielle Nutzung bereitgestellt."
+          ]
+        },
+        {
+          "h": "Berechtigung",
+          "body": [
+            "Um Sakura Drift zu nutzen, musst du das in deinem Land geltende Mindestalter für die Einwilligung erreichen, und die bei der Registrierung angegebenen Informationen müssen zutreffend sein."
+          ]
+        },
+        {
+          "h": "Dein Konto",
+          "body": [
+            "Du bist für die Aktivitäten in deinem Konto und für die Geheimhaltung deines Passworts verantwortlich. Führe nur ein einziges Konto für dich, teile keine Zugangsdaten und benachrichtige uns umgehend, wenn du vermutest, dass dein Konto kompromittiert wurde."
+          ]
+        },
+        {
+          "h": "Zulässige Nutzung",
+          "body": [
+            "Damit das Spiel für alle fair und einladend bleibt, verpflichtest du dich, Folgendes zu unterlassen:"
+          ],
+          "list": [
+            "betrügen, Fehler ausnutzen oder Bots, Skripte bzw. modifizierte Clients verwenden, um dir einen Vorteil zu verschaffen;",
+            "andere Spieler im Chat oder anderswo im Spiel belästigen, bedrohen oder beleidigen;",
+            "andere Spieler, Mitarbeitende oder sonstige Personen imitieren;",
+            "Daten aus dem Dienst auslesen, kopieren oder sammeln;",
+            "den Dienst oder seine Infrastruktur ausspähen, angreifen, überlasten oder versuchen, unbefugten Zugriff zu erlangen;",
+            "die Sicherheitsmaßnahmen des Spiels zurückentwickeln oder umgehen."
+          ]
+        },
+        {
+          "h": "Nutzerinhalte",
+          "body": [
+            "Du bist für die von dir erstellten Inhalte verantwortlich, einschließlich Chatnachrichten und deines gewählten Benutzernamens. Du gewährst uns eine eingeschränkte Lizenz, diese Inhalte zu speichern und anzuzeigen, soweit dies für den Betrieb des Spiels erforderlich ist.",
+            "Wir können Inhalte entfernen oder Konten einschränken, die gegen diese Bedingungen verstoßen."
+          ]
+        },
+        {
+          "h": "Geistiges Eigentum",
+          "body": [
+            "Das Spiel, einschließlich Code, Grafik, Musik und Branding, gehört seinen Erstellern. Du erhältst eine eingeschränkte, persönliche, nicht übertragbare Lizenz zum Spielen. Ohne Genehmigung darfst du es weder kopieren, weiterverbreiten noch abgeleitete Werke daraus erstellen."
+          ]
+        },
+        {
+          "h": "Verfügbarkeit des Dienstes",
+          "body": [
+            "Sakura Drift wird \u201ewie besehen\u201c und \u201ewie verfügbar\u201c bereitgestellt. Als akademisches Projekt kann es zu Ausfallzeiten kommen, und wir können Funktionen jederzeit ändern, aussetzen oder einstellen."
+          ]
+        },
+        {
+          "h": "Haftungsausschlüsse",
+          "body": [
+            "Soweit gesetzlich zulässig, wird das Spiel ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, einschließlich der Eignung für einen bestimmten Zweck sowie eines unterbrechungs- und fehlerfreien Betriebs."
+          ]
+        },
+        {
+          "h": "Haftungsbeschränkung",
+          "body": [
+            "Soweit gesetzlich zulässig, haften die Ersteller von Sakura Drift nicht für indirekte, beiläufige oder Folgeschäden, die aus deiner Nutzung oder Nichtnutzbarkeit des Spiels entstehen."
+          ]
+        },
+        {
+          "h": "Sperrung und Kündigung",
+          "body": [
+            "Wir können den Zugang für Konten sperren oder beenden, die gegen diese Bedingungen verstoßen oder den Dienst bzw. andere Spieler gefährden. Du kannst dein Konto jederzeit in deinen Kontoeinstellungen löschen."
+          ]
+        },
+        {
+          "h": "Anwendbares Recht",
+          "body": [
+            "Diese Bedingungen unterliegen dem am Betriebsort des Dienstes geltenden Recht [Gerichtsstand einfügen], ohne Berücksichtigung kollisionsrechtlicher Vorschriften."
+          ]
+        },
+        {
+          "h": "Änderungen dieser Bedingungen",
+          "body": [
+            "Wir können diese Bedingungen von Zeit zu Zeit aktualisieren. Das Datum oben gibt die aktuellste Version wieder, und die fortgesetzte Nutzung des Spiels nach Inkrafttreten der Änderungen bedeutet, dass du die aktualisierten Bedingungen akzeptierst."
+          ]
+        },
+        {
+          "h": "Kontakt",
+          "body": [
+            "Fragen zu diesen Bedingungen? Erreiche das Team unter hanjkim@student.42vienna.com oder über das Projekt-Repository."
+          ]
+        }
+      ]
+    },
+    "ja": {
+      "eyebrow": "法的事項 · 利用規約",
+      "title": "利用規約",
+      "subtitle": "Sakura Driftを利用するうえでのルールです。プレイすることで、本規約に同意したものとみなされます。",
+      "updated": "最終更新：2026年6月",
+      "backToHome": "← ホームに戻る",
+      "footer": "Sakura Drift · 桜ドリフト",
+      "sections": [
+        {
+          "h": "規約への同意",
+          "body": [
+            "アカウントを作成する、またはその他の方法でSakura Driftを利用することにより、本利用規約に同意したものとみなされます。同意されない場合は、本ゲームをご利用にならないでください。",
+            "Sakura Driftは学術プロジェクトであり、非商用目的で提供されます。"
+          ]
+        },
+        {
+          "h": "利用資格",
+          "body": [
+            "Sakura Driftを利用するには、お住まいの国で同意に必要とされる最低年齢を満たしている必要があり、登録時に提供する情報は正確でなければなりません。"
+          ]
+        },
+        {
+          "h": "アカウント",
+          "body": [
+            "アカウント上の行為、およびパスワードの機密保持についてはあなたが責任を負います。ご自身用のアカウントは1つだけ保持し、認証情報を共有せず、アカウントが侵害されたと思われる場合は速やかに当方へご連絡ください。"
+          ]
+        },
+        {
+          "h": "許容される利用",
+          "body": [
+            "すべての人にとって公平で居心地のよいゲームを保つため、以下の行為を行わないことに同意するものとします："
+          ],
+          "list": [
+            "チート行為、バグの悪用、または有利になるためのボット・スクリプト・改造クライアントの使用；",
+            "チャットやゲーム内のあらゆる場所で、他のプレイヤーへの嫌がらせ・脅迫・暴言を行うこと；",
+            "他のプレイヤー、スタッフ、その他の人物になりすますこと；",
+            "サービスからデータをスクレイピング・複製・収集すること；",
+            "サービスやそのインフラを探査・攻撃・過負荷にし、または不正アクセスを試みること；",
+            "ゲームのセキュリティ対策をリバースエンジニアリングまたは回避すること。"
+          ]
+        },
+        {
+          "h": "ユーザーコンテンツ",
+          "body": [
+            "チャットメッセージや選択したユーザー名を含め、あなたが作成するコンテンツについてはあなたが責任を負います。ゲームの運用に必要な範囲で、当該コンテンツを保存・表示するための限定的なライセンスを当方に付与するものとします。",
+            "当方は、本規約に違反するコンテンツを削除し、またはアカウントを制限することがあります。"
+          ]
+        },
+        {
+          "h": "知的財産",
+          "body": [
+            "コード、アートワーク、音楽、ブランディングを含む本ゲームは、その制作者に帰属します。あなたには、プレイするための限定的・個人的・譲渡不可のライセンスが付与されます。許可なくこれを複製・再配布し、または二次的著作物を作成することはできません。"
+          ]
+        },
+        {
+          "h": "サービスの提供",
+          "body": [
+            "Sakura Driftは「現状有姿」かつ「提供可能な範囲」で提供されます。学術プロジェクトであるため、ダウンタイムが生じることがあり、当方はいつでも機能を変更・停止・終了することがあります。"
+          ]
+        },
+        {
+          "h": "免責事項",
+          "body": [
+            "法令で認められる最大限の範囲において、本ゲームは、特定目的への適合性や中断・エラーのない動作を含め、明示・黙示を問わずいかなる保証もなく提供されます。"
+          ]
+        },
+        {
+          "h": "責任の制限",
+          "body": [
+            "法令で認められる最大限の範囲において、Sakura Driftの制作者は、本ゲームの利用または利用不能から生じる間接的・付随的・結果的損害について一切の責任を負いません。"
+          ]
+        },
+        {
+          "h": "利用停止と終了",
+          "body": [
+            "本規約に違反する、またはサービスや他のプレイヤーを危険にさらすアカウントについては、当方はアクセスを停止または終了することがあります。アカウントはいつでもアカウント設定から削除できます。"
+          ]
+        },
+        {
+          "h": "準拠法",
+          "body": [
+            "本規約は、サービスが運営される地の適用法［管轄を記入］に準拠し、抵触法の原則は適用されません。"
+          ]
+        },
+        {
+          "h": "本規約の変更",
+          "body": [
+            "本規約は随時更新されることがあります。上部の日付は最新版を示し、変更の発効後も本ゲームの利用を続けることは、更新後の規約に同意したことを意味します。"
+          ]
+        },
+        {
+          "h": "お問い合わせ",
+          "body": [
+            "本規約に関するご質問は、hanjkim@student.42vienna.com またはプロジェクトのリポジトリからチームまでご連絡ください。"
+          ]
+        }
+      ]
+    }
+  }
+}

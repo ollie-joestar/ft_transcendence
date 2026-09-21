@@ -1,0 +1,1618 @@
+{
+  "homepage": {
+    "muteMusic": {
+      "en": "Mute Music",
+      "de": "Musik stummschalten",
+      "ja": "音楽をミュート"
+    },
+    "playMusic": {
+      "en": "Play Music",
+      "de": "Musik abspielen",
+      "ja": "音楽を再生"
+    },
+    "dashboard": {
+      "en": "Dashboard",
+      "de": "Übersicht",
+      "ja": "ダッシュボード"
+    },
+    "signIn": {
+      "en": "Sign In",
+      "de": "Anmelden",
+      "ja": "サインイン"
+    },
+    "register": {
+      "en": "Register",
+      "de": "Registrieren",
+      "ja": "登録"
+    },
+    "title": {
+      "en": "SAKURA DRIFT",
+      "de": "SAKURA DRIFT",
+      "ja": "SAKURA DRIFT"
+    },
+    "warningText": {
+      "en": "Don't read this",
+      "de": "Lies das nicht",
+      "ja": "これは読まないでね"
+    },
+    "startDrifting": {
+      "en": "Start Drifting",
+      "de": "Mit dem Driften starten",
+      "ja": "ドリフトを始める"
+    },
+    "playAsGuest": {
+      "en": "Play as Guest",
+      "de": "Als Gast spielen",
+      "ja": "ゲストとしてプレイ"
+    },
+    "termsOfService": {
+      "en": "Terms of Service",
+      "de": "Nutzungsbedingungen",
+      "ja": "利用規約"
+    },
+    "privacyPolicy": {
+      "en": "Privacy Policy",
+      "de": "Datenschutzerklärung",
+      "ja": "プライバシーポリシー"
+    }
+  },
+  "registerpage": {
+    "createAccount": {
+      "en": "CREATE ACCOUNT",
+      "de": "KONTO ERSTELLEN",
+      "ja": "アカウントを作成"
+    },
+    "alreadyRacing": {
+      "en": "Already racing?",
+      "de": "Schon dabei?",
+      "ja": "もう参加済み？"
+    },
+    "signInLink": {
+      "en": "Sign in →",
+      "de": "Anmelden →",
+      "ja": "サインイン →"
+    },
+    "emailAddress": {
+      "en": "Email Address",
+      "de": "E-Mail-Adresse",
+      "ja": "メールアドレス"
+    },
+    "username": {
+      "en": "Username",
+      "de": "Benutzername",
+      "ja": "ユーザー名"
+    },
+    "password": {
+      "en": "Password",
+      "de": "Passwort",
+      "ja": "パスワード"
+    },
+    "confirm": {
+      "en": "Confirm",
+      "de": "Bestätigen",
+      "ja": "確認"
+    },
+    "passwordsDoNotMatch": {
+      "en": "Passwords do not match",
+      "de": "Passwörter stimmen nicht überein",
+      "ja": "パスワードが一致しません"
+    },
+    "passwordTooShort": {
+      "en": "Password must be at least 8 characters",
+      "de": "Das Passwort muss mindestens 8 Zeichen lang sein",
+      "ja": "パスワードは8文字以上である必要があります"
+    },
+    "creatingAccount": {
+      "en": "Creating account…",
+      "de": "Konto wird erstellt…",
+      "ja": "アカウントを作成中…"
+    },
+    "enterTheRace": {
+      "en": "Enter the Race",
+      "de": "In das Rennen einsteigen",
+      "ja": "レースに参加する"
+    },
+    "agreePrefix": {
+      "en": "By registering you agree to our",
+      "de": "Mit der Registrierung stimmst du unseren",
+      "ja": "登録することで、以下に同意したものとみなされます："
+    },
+    "emailRequired": {
+      "en": "Email is required",
+      "de": "E-Mail ist erforderlich",
+      "ja": "メールアドレスを入力してください"
+    },
+    "emailInvalid": {
+      "en": "Enter a valid email address",
+      "de": "Bitte gültige E-Mail-Adresse eingeben",
+      "ja": "有効なメールアドレスを入力してください"
+    },
+    "usernameRequired": {
+      "en": "Username is required",
+      "de": "Benutzername ist erforderlich",
+      "ja": "ユーザー名を入力してください"
+    },
+    "usernameLength": {
+      "en": "Username must be 3–20 characters",
+      "de": "Benutzername muss 3–20 Zeichen lang sein",
+      "ja": "ユーザー名は3〜20文字で入力してください"
+    },
+    "usernameChars": {
+      "en": "Use only letters, numbers, _ or -",
+      "de": "Nur Buchstaben, Zahlen, _ oder -",
+      "ja": "使用できる文字は英数字、_、- のみです"
+    },
+    "agreeJoin": {
+      "en": "and",
+      "de": "und der",
+      "ja": "および"
+    },
+    "termsOfService": {
+      "en": "Terms of Service",
+      "de": "Nutzungsbedingungen",
+      "ja": "利用規約"
+    },
+    "privacyPolicy": {
+      "en": "Privacy Policy",
+      "de": "Datenschutzerklärung",
+      "ja": "プライバシーポリシー"
+    },
+    "joinTheStartingGrid": {
+      "en": "Join the starting grid",
+      "de": "Schließ dich dem Startfeld an",
+      "ja": "スターティンググリッドに参加しよう"
+    },
+    "raceYourWayToTheTop": {
+      "en": "RACE YOUR WAY TO THE TOP",
+      "de": "FAHRE AN DIE SPITZE",
+      "ja": "走り抜けて頂点へ"
+    },
+    "competeWorldwide": {
+      "en": "Compete against drivers worldwide. Climb the global rankings. Break records. Own the track.",
+      "de": "Tritt gegen Fahrer weltweit an. Erklimme die globalen Ranglisten. Breche Rekorde. Erobere die Strecke.",
+      "ja": "世界中のドライバーと競え。世界ランキングを駆け上がれ。記録を塗り替えろ。コースを支配しろ。"
+    },
+    "usernameTaken": {
+      "en": "That username is already taken",
+      "de": "Dieser Benutzername ist bereits vergeben",
+      "ja": "そのユーザー名はすでに使われています"
+    },
+    "emailInUse": {
+      "en": "That email is already registered",
+      "de": "Diese E-Mail ist bereits registriert",
+      "ja": "そのメールアドレスはすでに登録されています"
+    },
+    "registrationFailed": {
+      "en": "Couldn't create your account — try again",
+      "de": "Konto konnte nicht erstellt werden — bitte erneut versuchen",
+      "ja": "アカウントを作成できませんでした。もう一度お試しください"
+    }
+  },
+  "dashboard": {
+    "dashboard": {
+      "en": "Dashboard",
+      "de": "Übersicht",
+      "ja": "ダッシュボード"
+    },
+    "profile": {
+      "en": "Profile",
+      "de": "Profil",
+      "ja": "プロフィール"
+    },
+    "leaderboards": {
+      "en": "Leaderboards",
+      "de": "Ranglisten",
+      "ja": "リーダーボード"
+    },
+    "settings": {
+      "en": "Settings",
+      "de": "Einstellungen",
+      "ja": "設定"
+    },
+    "logOut": {
+      "en": "Log out",
+      "de": "Abmelden",
+      "ja": "ログアウト"
+    },
+    "welcomeBack": {
+      "en": "Welcome back,",
+      "de": "Willkommen zurück,",
+      "ja": "おかえりなさい、"
+    },
+    "getBackOnTrack": {
+      "en": "The roads are calling. Let's get back on track.",
+      "de": "Die Straßen rufen. Lass uns wieder auf die Strecke gehen.",
+      "ja": "道が呼んでいる。また走り出そう。"
+    },
+    "overview": {
+      "en": "Overview",
+      "de": "Übersicht",
+      "ja": "概要"
+    },
+    "startARace": {
+      "en": "Start a race",
+      "de": "Rennen starten",
+      "ja": "レースを始める"
+    },
+    "racesHistoryDesc": {
+      "en": "Jump in a race to start building your race history",
+      "de": "Steig in ein Rennen ein, um deine Rennhistorie aufzubauen",
+      "ja": "レースに参加して走行履歴を積み上げよう"
+    },
+    "noLobbiesOpen": {
+      "en": "No lobbies open",
+      "de": "Keine Lobbys offen",
+      "ja": "開いているロビーはありません"
+    },
+    "oneLobbyOpen": {
+      "en": "{count} lobby open",
+      "de": "{count} Lobby offen",
+      "ja": "{count}件のロビーが公開中"
+    },
+    "multipleLobbiesOpen": {
+      "en": "{count} lobbies open",
+      "de": "{count} Lobbys offen",
+      "ja": "{count}件のロビーが公開中"
+    },
+    "lobbiesDesc": {
+      "en": "The mountain road awaits. Create or join a lobby to race.",
+      "de": "Die Bergstraße wartet. Erstelle oder tritt einer Lobby bei, um zu fahren.",
+      "ja": "山道が待っている。ロビーを作成するか参加してレースしよう。"
+    },
+    "browseLobbies": {
+      "en": "Browse lobbies",
+      "de": "Lobbys durchsuchen",
+      "ja": "ロビーを見る"
+    },
+    "leaderboardsDesc": {
+      "en": "Global rankings of all players sorted per track",
+      "de": "Globale Ranglisten aller Spieler, nach Strecke sortiert",
+      "ja": "全プレイヤーの世界ランキングをトラックごとに表示"
+    },
+    "viewLeaderboards": {
+      "en": "View leaderboards",
+      "de": "Ranglisten ansehen",
+      "ja": "リーダーボードを見る"
+    },
+    "lapsCompleted": {
+      "en": "Laps completed",
+      "de": "Absolvierte Runden",
+      "ja": "完了したラップ"
+    },
+    "totalTimeDriven": {
+      "en": "Total time driven",
+      "de": "Gesamte Fahrzeit",
+      "ja": "総走行時間"
+    },
+    "totalDrift": {
+      "en": "Total drift",
+      "de": "Gesamtdrift",
+      "ja": "総ドリフト"
+    },
+    "leaderboardRank": {
+      "en": "Leaderboard rank",
+      "de": "Ranglistenplatz",
+      "ja": "ランキング順位"
+    },
+    "driftKing": {
+      "en": "DRIFT KING",
+      "de": "DRIFT KING",
+      "ja": "ドリフトキング"
+    },
+    "unranked": {
+      "en": "Unranked",
+      "de": "Nicht platziert",
+      "ja": "ランク外"
+    },
+    "averagedOverTrack": {
+      "en": "averaged over {count} track",
+      "de": "gemittelt über {count} Strecke",
+      "ja": "{count}トラックの平均"
+    },
+    "averagedOverTracks": {
+      "en": "averaged over {count} tracks",
+      "de": "gemittelt über {count} Strecken",
+      "ja": "{count}トラックの平均"
+    }
+  },
+  "loginpage": {
+    "invalidCredentials": {
+      "en": "Incorrect email or password",
+      "de": "E-Mail oder Passwort ist falsch",
+      "ja": "メールアドレスまたはパスワードが正しくありません"
+    },
+    "eyebrow": {
+      "en": "Your Track Record",
+      "de": "Deine Bilanz",
+      "ja": "あなたの走行記録"
+    },
+    "headline": {
+      "en": "BACK ON THE GRIND",
+      "de": "ZURÜCK AUF DIE STRECKE",
+      "ja": "再び走り出せ"
+    },
+    "subtitle": {
+      "en": "Your rivals are already racing. Sign in and reclaim your position on the leaderboard.",
+      "de": "Deine Rivalen fahren bereits. Melde dich an und hol dir deinen Platz in der Rangliste zurück.",
+      "ja": "ライバルはもう走っている。サインインしてリーダーボードの座を取り戻そう。"
+    },
+    "signIn": {
+      "en": "SIGN IN",
+      "de": "ANMELDEN",
+      "ja": "サインイン"
+    },
+    "noAccount": {
+      "en": "No account?",
+      "de": "Kein Konto?",
+      "ja": "アカウントをお持ちでない方は？"
+    },
+    "registerFree": {
+      "en": "Register free →",
+      "de": "Kostenlos registrieren →",
+      "ja": "無料で登録 →"
+    },
+    "emailAddress": {
+      "en": "Email Address",
+      "de": "E-Mail-Adresse",
+      "ja": "メールアドレス"
+    },
+    "password": {
+      "en": "Password",
+      "de": "Passwort",
+      "ja": "パスワード"
+    },
+    "forgotPassword": {
+      "en": "Forgot password?",
+      "de": "Passwort vergessen?",
+      "ja": "パスワードをお忘れですか？"
+    },
+    "loading": {
+      "en": "Loading…",
+      "de": "Wird geladen…",
+      "ja": "読み込み中…"
+    },
+    "startEngine": {
+      "en": "Start Engine",
+      "de": "Motor starten",
+      "ja": "エンジン始動"
+    },
+    "loginFailed": {
+      "en": "Login failed",
+      "de": "Anmeldung fehlgeschlagen",
+      "ja": "ログインに失敗しました"
+    }
+  },
+  "notfound": {
+    "errorLabel": {
+      "en": "Error — 404",
+      "de": "Fehler — 404",
+      "ja": "エラー — 404"
+    },
+    "title": {
+      "en": "PAGE NOT FOUND",
+      "de": "SEITE NICHT GEFUNDEN",
+      "ja": "ページが見つかりません"
+    },
+    "body": {
+      "en": "The track you're looking for doesn't exist — it may have been moved, removed, or never built.",
+      "de": "Die gesuchte Strecke existiert nicht — sie wurde vielleicht verschoben, entfernt oder nie gebaut.",
+      "ja": "お探しのコースは存在しません。移動・削除されたか、もともと存在しなかった可能性があります。"
+    },
+    "returnHome": {
+      "en": "← Return to home",
+      "de": "← Zurück zur Startseite",
+      "ja": "← ホームに戻る"
+    }
+  },
+  "aboutus": {
+    "eyebrow": {
+      "en": "The Team",
+      "de": "Das Team",
+      "ja": "チーム"
+    },
+    "title": {
+      "en": "THE CREW",
+      "de": "DIE CREW",
+      "ja": "クルー"
+    },
+    "subtitle": {
+      "en": "Students from 42, one capstone, and a shared refusal to ship anything that isn't fun to drive.",
+      "de": "Studierende von 42, ein Abschlussprojekt und der gemeinsame Anspruch, nichts auszuliefern, das keinen Fahrspaß macht.",
+      "ja": "42の学生たち、ひとつの集大成、そして「運転して楽しくないものは出さない」という共通の信念。"
+    },
+    "projectLabel": {
+      "en": "The Project",
+      "de": "Das Projekt",
+      "ja": "プロジェクト"
+    },
+    "projectTitle": {
+      "en": "Built at 42",
+      "de": "Entwickelt bei 42",
+      "ja": "42で開発"
+    },
+    "projectBody": {
+      "en": "Sakura Drift is our ft_transcendence: the capstone project of the 42 common core. The brief was open: a full-stack, real-time multiplayer web application. We chose to build something we'd actually want to play. Every layer, from the physics to the petals, is ours.",
+      "de": "Sakura Drift ist unser ft_transcendence: das Abschlussprojekt des 42 Common Core. Die Vorgabe war offen: eine Full-Stack-Echtzeit-Multiplayer-Webanwendung. Wir wollten etwas bauen, das wir selbst spielen würden. Jede Schicht, von der Physik bis zu den Blütenblättern, stammt von uns.",
+      "ja": "Sakura Driftは私たちのft_transcendence、42コモンコアの集大成プロジェクトです。課題は自由でした：フルスタックのリアルタイム・マルチプレイヤーWebアプリ。私たちは自分たちが本当に遊びたいものを作ることを選びました。物理から花びらまで、すべての層が私たちのものです。"
+    },
+    "teamLabel": {
+      "en": "The Team",
+      "de": "Das Team",
+      "ja": "チーム"
+    },
+    "teamTitle": {
+      "en": "Who built it",
+      "de": "Wer es gebaut hat",
+      "ja": "開発メンバー"
+    },
+    "roleFullstack": {
+      "en": "Fullstack & DevOps",
+      "de": "Fullstack & DevOps",
+      "ja": "フルスタック & DevOps"
+    },
+    "roleGame": {
+      "en": "Game & 3D Graphics",
+      "de": "Spiel & 3D-Grafik",
+      "ja": "ゲーム & 3Dグラフィック"
+    },
+    "roleCyber": {
+      "en": "Cybersecurity",
+      "de": "Cybersicherheit",
+      "ja": "サイバーセキュリティ"
+    },
+    "roleAI": {
+      "en": "AI & Fullstack",
+      "de": "KI & Fullstack",
+      "ja": "AI & Fullstack"
+    },
+    "stackLabel": {
+      "en": "The Stack",
+      "de": "Der Stack",
+      "ja": "技術スタック"
+    },
+    "stackTitle": {
+      "en": "What it runs on",
+      "de": "Worauf es läuft",
+      "ja": "使用技術"
+    }
+  },
+  "aboutgame": {
+    "eyebrow": {
+      "en": "The Game",
+      "de": "Das Spiel",
+      "ja": "ゲーム"
+    },
+    "title": {
+      "en": "SAKURA DRIFT",
+      "de": "SAKURA DRIFT",
+      "ja": "SAKURA DRIFT"
+    },
+    "subtitle": {
+      "en": "A low-poly multiplayer arcade racer built around the art of the drift — and a leaderboard worth fighting for.",
+      "de": "Ein Low-Poly-Multiplayer-Arcade-Racer rund um die Kunst des Driftens — und eine Rangliste, für die es sich zu kämpfen lohnt.",
+      "ja": "ドリフトの技を中心に据えたローポリのマルチプレイヤー・アーケードレーサー。そして、競う価値のあるリーダーボード。"
+    },
+    "premiseLabel": {
+      "en": "The Premise",
+      "de": "Die Prämisse",
+      "ja": "コンセプト"
+    },
+    "premiseTitle": {
+      "en": "MASTER THE TRACK",
+      "de": "BEHERRSCHE DIE STRECKE",
+      "ja": "コースを極めろ"
+    },
+    "premiseBody": {
+      "en": "Sakura Drift drops you into a minimalistic racetrack. No realism for its own sake; just momentum and the line. Learn a corner, then learn to carry speed through it. The track doesn't care about your lap time until you do.",
+      "de": "Sakura Drift wirft dich auf eine minimalistische Rennstrecke. Kein Realismus um seiner selbst willen; nur Schwung und die Ideallinie. Lerne eine Kurve, dann lerne, Tempo durch sie mitzunehmen. Die Strecke kümmert sich erst um deine Rundenzeit, wenn du es tust.",
+      "ja": "Sakura Driftは、あなたをミニマルなレースコースへと放り込む。リアルさのためのリアルさはない。あるのは勢いとライン取りだけ。コーナーを覚え、そこを速度を保ったまま抜ける術を覚えろ。コースは、あなたが気にするまであなたのタイムを気にしない。"
+    },
+    "featuresLabel": {
+      "en": "Features",
+      "de": "Funktionen",
+      "ja": "特徴"
+    },
+    "featuresTitle": {
+      "en": "What's under the hood",
+      "de": "Was unter der Haube steckt",
+      "ja": "中身を覗いてみよう"
+    },
+    "feature1Title": {
+      "en": "Real-time racing",
+      "de": "Echtzeit-Rennen",
+      "ja": "リアルタイムレース"
+    },
+    "feature1Body": {
+      "en": "Multiplayer over a low-latency socket layer. Positions and drifts sync live.",
+      "de": "Multiplayer über eine latenzarme Socket-Schicht. Positionen und Drifts synchronisieren live.",
+      "ja": "低遅延のソケット層によるマルチプレイヤー。位置とドリフトがライブで同期する。"
+    },
+    "feature2Title": {
+      "en": "Minimalistic tracks",
+      "de": "Minimalistische Strecken",
+      "ja": "ミニマルなコース"
+    },
+    "feature2Body": {
+      "en": "Hand-built low-poly racetracks in Three.js",
+      "de": "Handgebaute Low-Poly-Rennstrecken in Three.js",
+      "ja": "Three.jsで手作りしたローポリのコース"
+    },
+    "feature3Title": {
+      "en": "Drift scoring",
+      "de": "Drift-Wertung",
+      "ja": "ドリフトスコア"
+    },
+    "feature3Body": {
+      "en": "Hold the angle, chain the corners, bank the smoke. Style feeds your score as much as the clock does.",
+      "de": "Halte den Winkel, verkette die Kurven, sammle den Rauch. Stil zählt für deinen Score genauso wie die Uhr.",
+      "ja": "アングルを保ち、コーナーを連ね、煙を稼げ。スタイルはタイムと同じくらいスコアを左右する。"
+    },
+    "feature4Title": {
+      "en": "Sakura aesthetic",
+      "de": "Sakura-Ästhetik",
+      "ja": "桜の美学"
+    },
+    "feature4Body": {
+      "en": "A washi-and-crimson world with falling petals. Arcade feel, Japanese soul, zero HUD clutter.",
+      "de": "Eine Welt aus Washi und Karmesinrot mit fallenden Blütenblättern. Arcade-Gefühl, japanische Seele, kein HUD-Wirrwarr.",
+      "ja": "和紙と紅に舞い散る花びらの世界。アーケードの手触り、日本の心、ごちゃつかないHUD。"
+    },
+    "modesLabel": {
+      "en": "Modes",
+      "de": "Modi",
+      "ja": "モード"
+    },
+    "modesTitle": {
+      "en": "Three ways to race",
+      "de": "Drei Arten zu fahren",
+      "ja": "3つのレースの楽しみ方"
+    },
+    "mode1Tag": {
+      "en": "Quick Race",
+      "de": "Schnelles Rennen",
+      "ja": "クイックレース"
+    },
+    "mode1Title": {
+      "en": "Jump straight in",
+      "de": "Sofort loslegen",
+      "ja": "すぐに飛び込む"
+    },
+    "mode1Body": {
+      "en": "Matchmaking drops you onto the grid against whoever is online right now.",
+      "de": "Das Matchmaking setzt dich gegen alle, die gerade online sind, an den Start.",
+      "ja": "マッチメイキングが、今オンラインの相手とのグリッドへあなたを送り込む。"
+    },
+    "mode2Tag": {
+      "en": "Lobbies",
+      "de": "Lobbys",
+      "ja": "ロビー"
+    },
+    "mode2Title": {
+      "en": "Bring your rivals",
+      "de": "Bring deine Rivalen mit",
+      "ja": "ライバルを呼べ"
+    },
+    "mode2Body": {
+      "en": "Spin up a private room, share the code, settle it among friends.",
+      "de": "Erstelle einen privaten Raum, teile den Code, macht es unter Freunden aus.",
+      "ja": "プライベートルームを立て、コードを共有し、仲間内で決着をつけろ。"
+    },
+    "mode3Tag": {
+      "en": "Time Trial",
+      "de": "Zeitfahren",
+      "ja": "タイムトライアル"
+    },
+    "mode3Title": {
+      "en": "Chase the ghost",
+      "de": "Jage den Geist",
+      "ja": "ゴーストを追え"
+    },
+    "mode3Body": {
+      "en": "Race the clock and your own best line. No traffic, no excuses. Just you and the ghost of the past.",
+      "de": "Fahre gegen die Uhr und deine eigene Ideallinie. Kein Verkehr, keine Ausreden. Nur du und der Geist der Vergangenheit.",
+      "ja": "時計と自分のベストラインに挑め。邪魔者なし、言い訳なし。あるのは過去のゴーストとあなただけ。"
+    },
+    "ctaTitle": {
+      "en": "Ready to drift?",
+      "de": "Bereit zum Driften?",
+      "ja": "ドリフトの準備はいいか？"
+    },
+    "ctaStart": {
+      "en": "Start Drifting",
+      "de": "Mit dem Driften starten",
+      "ja": "ドリフトを始める"
+    },
+    "ctaCreateAccount": {
+      "en": "Create account",
+      "de": "Konto erstellen",
+      "ja": "アカウントを作成"
+    },
+    "back": {
+      "en": "← Back",
+      "de": "← Zurück",
+      "ja": "← 戻る"
+    }
+  },
+  "leaderboard": {
+    "eyebrow": {
+      "en": "Leaderboard",
+      "de": "Rangliste",
+      "ja": "リーダーボード"
+    },
+    "title": {
+      "en": "Best Laps",
+      "de": "Beste Runden",
+      "ja": "ベストラップ"
+    },
+    "backDashboard": {
+      "en": "← Dashboard",
+      "de": "← Übersicht",
+      "ja": "← ダッシュボード"
+    },
+    "colRank": {
+      "en": "Rank",
+      "de": "Platz",
+      "ja": "順位"
+    },
+    "colDriver": {
+      "en": "Driver",
+      "de": "Fahrer",
+      "ja": "ドライバー"
+    },
+    "colBestLap": {
+      "en": "Best Lap",
+      "de": "Beste Runde",
+      "ja": "ベストラップ"
+    },
+    "loading": {
+      "en": "Loading…",
+      "de": "Wird geladen…",
+      "ja": "読み込み中…"
+    },
+    "error": {
+      "en": "Couldn't load the leaderboard. Try again later.",
+      "de": "Rangliste konnte nicht geladen werden. Versuche es später erneut.",
+      "ja": "リーダーボードを読み込めませんでした。後でもう一度お試しください。"
+    },
+    "empty": {
+      "en": "No times yet — be the first to set one.",
+      "de": "Noch keine Zeiten — sei der Erste, der eine setzt.",
+      "ja": "まだタイムがありません。最初の記録を作ろう。"
+    },
+    "you": {
+      "en": "You",
+      "de": "Du",
+      "ja": "あなた"
+    },
+    "unknown": {
+      "en": "Unknown",
+      "de": "Unbekannt",
+      "ja": "不明"
+    }
+  },
+  "lobbies": {
+    "eyebrow": {
+      "en": "Lobbies",
+      "de": "Lobbys",
+      "ja": "ロビー"
+    },
+    "title": {
+      "en": "Open Races",
+      "de": "Offene Rennen",
+      "ja": "開催中のレース"
+    },
+    "backDashboard": {
+      "en": "← Dashboard",
+      "de": "← Übersicht",
+      "ja": "← ダッシュボード"
+    },
+    "hostLobby": {
+      "en": "+ Host a lobby",
+      "de": "+ Lobby erstellen",
+      "ja": "+ ロビーを作成"
+    },
+    "refresh": {
+      "en": "↻ Refresh",
+      "de": "↻ Aktualisieren",
+      "ja": "↻ 更新"
+    },
+    "refreshing": {
+      "en": "Refreshing…",
+      "de": "Wird aktualisiert…",
+      "ja": "更新中…"
+    },
+    "colHostTrack": {
+      "en": "Host / Track",
+      "de": "Host / Strecke",
+      "ja": "ホスト / コース"
+    },
+    "colPlayers": {
+      "en": "Players",
+      "de": "Spieler",
+      "ja": "プレイヤー"
+    },
+    "colStatus": {
+      "en": "Status",
+      "de": "Status",
+      "ja": "状態"
+    },
+    "colJoin": {
+      "en": "Join",
+      "de": "Beitreten",
+      "ja": "参加"
+    },
+    "loading": {
+      "en": "Loading…",
+      "de": "Wird geladen…",
+      "ja": "読み込み中…"
+    },
+    "error": {
+      "en": "Couldn't load lobbies. Try again.",
+      "de": "Lobbys konnten nicht geladen werden. Versuche es erneut.",
+      "ja": "ロビーを読み込めませんでした。もう一度お試しください。"
+    },
+    "empty": {
+      "en": "No lobbies open right now — host one to get started.",
+      "de": "Gerade sind keine Lobbys offen — erstelle eine, um loszulegen.",
+      "ja": "現在開いているロビーはありません。作成して始めよう。"
+    },
+    "unknownHost": {
+      "en": "Unknown host",
+      "de": "Unbekannter Host",
+      "ja": "不明なホスト"
+    },
+    "specSuffix": {
+      "en": "spec",
+      "de": "Zus.",
+      "ja": "観戦"
+    },
+    "statusRacing": {
+      "en": "Racing",
+      "de": "Rennen",
+      "ja": "レース中"
+    },
+    "statusLobby": {
+      "en": "Lobby",
+      "de": "Lobby",
+      "ja": "ロビー"
+    },
+    "actionJoin": {
+      "en": "Join",
+      "de": "Beitreten",
+      "ja": "参加"
+    },
+    "actionSpectate": {
+      "en": "Spectate",
+      "de": "Zuschauen",
+      "ja": "観戦"
+    }
+  },
+  "races": {
+    "eyebrow": {
+      "en": "Profile",
+      "de": "Profil",
+      "ja": "プロフィール"
+    },
+    "title": {
+      "en": "Your Races",
+      "de": "Deine Rennen",
+      "ja": "あなたのレース"
+    },
+    "backDashboard": {
+      "en": "← Dashboard",
+      "de": "← Übersicht",
+      "ja": "← ダッシュボード"
+    },
+    "statRaces": {
+      "en": "Races",
+      "de": "Rennen",
+      "ja": "レース"
+    },
+    "statWins": {
+      "en": "Wins",
+      "de": "Siege",
+      "ja": "勝利"
+    },
+    "statBestLap": {
+      "en": "Best lap",
+      "de": "Beste Runde",
+      "ja": "ベストラップ"
+    },
+    "colTrack": {
+      "en": "Track",
+      "de": "Strecke",
+      "ja": "コース"
+    },
+    "colBestLap": {
+      "en": "Best Lap",
+      "de": "Beste Runde",
+      "ja": "ベストラップ"
+    },
+    "colRaceTime": {
+      "en": "Race Time",
+      "de": "Rennzeit",
+      "ja": "レースタイム"
+    },
+    "colPos": {
+      "en": "Pos",
+      "de": "Pl.",
+      "ja": "順位"
+    },
+    "loading": {
+      "en": "Loading…",
+      "de": "Wird geladen…",
+      "ja": "読み込み中…"
+    },
+    "error": {
+      "en": "Couldn't load your races. Try again later.",
+      "de": "Deine Rennen konnten nicht geladen werden. Versuche es später erneut.",
+      "ja": "レースを読み込めませんでした。後でもう一度お試しください。"
+    },
+    "empty": {
+      "en": "No races yet — jump in a race to start your history.",
+      "de": "Noch keine Rennen — steig in ein Rennen ein, um deine Historie zu starten.",
+      "ja": "まだレースがありません。レースに参加して履歴を作ろう。"
+    },
+    "justNow": {
+      "en": "just now",
+      "de": "gerade eben",
+      "ja": "たった今"
+    },
+    "minutesAgo": {
+      "en": "{count}m ago",
+      "de": "vor {count}m",
+      "ja": "{count}分前"
+    },
+    "hoursAgo": {
+      "en": "{count}h ago",
+      "de": "vor {count}h",
+      "ja": "{count}時間前"
+    },
+    "daysAgo": {
+      "en": "{count}d ago",
+      "de": "vor {count}T",
+      "ja": "{count}日前"
+    }
+  },
+  "profile": {
+    "redirectingLogin": {
+      "en": "Redirecting to login…",
+      "de": "Weiterleitung zur Anmeldung…",
+      "ja": "ログインへ移動中…"
+    },
+    "loadingProfile": {
+      "en": "Loading profile…",
+      "de": "Profil wird geladen…",
+      "ja": "プロフィールを読み込み中…"
+    },
+    "noDriverNamed": {
+      "en": "No driver named “{username}”.",
+      "de": "Kein Fahrer namens „{username}“.",
+      "ja": "「{username}」というドライバーはいません。"
+    },
+    "goBack": {
+      "en": "Go back",
+      "de": "Zurück",
+      "ja": "戻る"
+    },
+    "back": {
+      "en": "← Back",
+      "de": "← Zurück",
+      "ja": "← 戻る"
+    },
+    "since": {
+      "en": "since",
+      "de": "seit",
+      "ja": "登録"
+    },
+    "friends": {
+      "en": "✓ Friends",
+      "de": "✓ Befreundet",
+      "ja": "✓ フレンド"
+    },
+    "requestSent": {
+      "en": "Request sent",
+      "de": "Anfrage gesendet",
+      "ja": "申請済み"
+    },
+    "acceptRequest": {
+      "en": "Accept request",
+      "de": "Anfrage annehmen",
+      "ja": "申請を承認"
+    },
+    "addFriend": {
+      "en": "Add friend",
+      "de": "Freund hinzufügen",
+      "ja": "フレンド追加"
+    },
+    "statRaces": {
+      "en": "Races",
+      "de": "Rennen",
+      "ja": "レース"
+    },
+    "statWins": {
+      "en": "Wins",
+      "de": "Siege",
+      "ja": "勝利"
+    },
+    "statTotalTime": {
+      "en": "Total time driven",
+      "de": "Gesamte Fahrzeit",
+      "ja": "総走行時間"
+    },
+    "statTotalLaps": {
+      "en": "Total laps",
+      "de": "Runden gesamt",
+      "ja": "総ラップ数"
+    },
+    "statTotalDrift": {
+      "en": "Total drift",
+      "de": "Gesamtdrift",
+      "ja": "総ドリフト"
+    },
+    "statLeaderboardRank": {
+      "en": "Leaderboard rank",
+      "de": "Ranglistenplatz",
+      "ja": "ランキング順位"
+    },
+    "driftKing": {
+      "en": "DRIFT KING",
+      "de": "DRIFT KING",
+      "ja": "ドリフトキング"
+    },
+    "unranked": {
+      "en": "Unranked",
+      "de": "Nicht platziert",
+      "ja": "ランク外"
+    },
+    "personalBests": {
+      "en": "Personal bests",
+      "de": "Persönliche Bestzeiten",
+      "ja": "自己ベスト"
+    },
+    "noTimeSet": {
+      "en": "No time set",
+      "de": "Keine Zeit",
+      "ja": "記録なし"
+    },
+    "careerHighlights": {
+      "en": "Career highlights",
+      "de": "Karriere-Höhepunkte",
+      "ja": "キャリアハイライト"
+    },
+    "winRate": {
+      "en": "Win rate",
+      "de": "Siegquote",
+      "ja": "勝率"
+    },
+    "podiums": {
+      "en": "Podiums",
+      "de": "Podestplätze",
+      "ja": "表彰台"
+    },
+    "longestWinStreak": {
+      "en": "Longest win streak",
+      "de": "Längste Siegesserie",
+      "ja": "最長連勝"
+    },
+    "favoriteTrack": {
+      "en": "Favorite track",
+      "de": "Lieblingsstrecke",
+      "ja": "お気に入りコース"
+    },
+    "loginRequired": {
+      "en": "Please try again.",
+      "de": "Bitte versuche es erneut.",
+      "ja": "もう一度お試しください。"
+    },
+    "online": {
+      "en": "online",
+      "de": "online",
+      "ja": "オンライン"
+    },
+    "offline": {
+      "en": "offline",
+      "de": "offline",
+      "ja": "オフライン"
+    }
+  },
+  "settings": {
+    "dark": {
+      "en": "Dark",
+      "de": "Dunkel",
+      "ja": "ダーク"
+    },
+    "light": {
+      "en": "Light",
+      "de": "Hell",
+      "ja": "ライト"
+    },
+    "language": {
+      "en": "Language",
+      "de": "Sprache",
+      "ja": "言語"
+    },
+    "home": {
+      "en": "Home",
+      "de": "Startseite",
+      "ja": "ホーム"
+    },
+    "aboutUs": {
+      "en": "About us",
+      "de": "Über uns",
+      "ja": "私たちについて"
+    },
+    "aboutGame": {
+      "en": "About the game",
+      "de": "Über das Spiel",
+      "ja": "ゲームについて"
+    },
+    "logOut": {
+      "en": "Log Out",
+      "de": "Abmelden",
+      "ja": "ログアウト"
+    },
+    "logIn": {
+      "en": "Log In",
+      "de": "Anmelden",
+      "ja": "ログイン"
+    }
+  },
+  "game": {
+    "raceSetup": {
+      "en": "Race Setup",
+      "de": "Renn-setup",
+      "ja": "レース設定"
+    },
+    "raceType": {
+      "en": "Race Type",
+      "de": "Renntyp",
+      "ja": "レースタイプ"
+    },
+    "botRace": {
+      "en": "Bot Race",
+      "de": "Bot-Rennen",
+      "ja": "ボットレース"
+    },
+    "botRaceDesc": {
+      "en": "Race a single AI opponent",
+      "de": "Tritt gegen einen einzelnen KI-Gegner an",
+      "ja": "AI 1台と対戦"
+    },
+    "multiplayer": {
+      "en": "Multiplayer",
+      "de": "Mehrspieler",
+      "ja": "マルチプレイヤー"
+    },
+    "multiplayerDesc": {
+      "en": "Race other humans in a lobby",
+      "de": "Fahre in einer Lobby gegen andere Menschen",
+      "ja": "ロビーで他のプレイヤーと対戦"
+    },
+    "timeTrial": {
+      "en": "Time Trial",
+      "de": "Zeitfahren",
+      "ja": "タイムトライアル"
+    },
+    "timeTrialDesc": {
+      "en": "Chase your best lap, solo (infinite laps)",
+      "de": "Jage deine beste Runde, allein (unendliche Runden)",
+      "ja": "自己ベストに挑戦、ソロ（ラップ無制限）"
+    },
+    "difficulty": {
+      "en": "Difficulty",
+      "de": "Schwierigkeit",
+      "ja": "難易度"
+    },
+    "easy": {
+      "en": "Easy",
+      "de": "Leicht",
+      "ja": "イージー"
+    },
+    "hard": {
+      "en": "Hard",
+      "de": "Schwer",
+      "ja": "ハード"
+    },
+    "laps": {
+      "en": "Laps",
+      "de": "Runden",
+      "ja": "ラップ"
+    },
+    "track": {
+      "en": "Track",
+      "de": "Strecke",
+      "ja": "コース"
+    },
+    "colorScheme": {
+      "en": "Color Scheme",
+      "de": "Farbschema",
+      "ja": "カラーテーマ"
+    },
+    "light": {
+      "en": "Light",
+      "de": "Hell",
+      "ja": "ライト"
+    },
+    "dark": {
+      "en": "Dark",
+      "de": "Dunkel",
+      "ja": "ダーク"
+    },
+    "createLobby": {
+      "en": "Create Lobby",
+      "de": "Lobby erstellen",
+      "ja": "ロビーを作成"
+    },
+    "startRace": {
+      "en": "Start Race",
+      "de": "Rennen starten",
+      "ja": "レース開始"
+    },
+    "backDashboard": {
+      "en": "← Dashboard",
+      "de": "← Übersicht",
+      "ja": "← ダッシュボード"
+    },
+    "lobby": {
+      "en": "Lobby",
+      "de": "Lobby",
+      "ja": "ロビー"
+    },
+    "inviteLink": {
+      "en": "Invite Link",
+      "de": "Einladungslink",
+      "ja": "招待リンク"
+    },
+    "copy": {
+      "en": "Copy",
+      "de": "Kopieren",
+      "ja": "コピー"
+    },
+    "copied": {
+      "en": "Copied!",
+      "de": "Kopiert!",
+      "ja": "コピーしました！"
+    },
+    "sending": {
+      "en": "Sending…",
+      "de": "Wird gesendet…",
+      "ja": "送信中…"
+    },
+    "sent": {
+      "en": "Sent!",
+      "de": "Gesendet!",
+      "ja": "送信しました！"
+    },
+    "noFriends": {
+      "en": "No Friends",
+      "de": "Keine Freunde",
+      "ja": "フレンドなし"
+    },
+    "inviteFriends": {
+      "en": "Invite Friends",
+      "de": "Freunde einladen",
+      "ja": "フレンドを招待"
+    },
+    "inviteMessage": {
+      "en": "{host} invited you to a race! {url}",
+      "de": "{host} hat dich zu einem Rennen eingeladen! {url}",
+      "ja": "{host} さんがレースに招待しました！ {url}"
+    },
+    "aFriend": {
+      "en": "A friend",
+      "de": "Ein Freund",
+      "ja": "フレンド"
+    },
+    "setNumberOfLaps": {
+      "en": "Set the number of laps",
+      "de": "Anzahl der Runden festlegen",
+      "ja": "ラップ数を設定"
+    },
+    "lapsSetByHost": {
+      "en": "Laps set by host",
+      "de": "Runden vom Host festgelegt",
+      "ja": "ラップ数はホストが設定"
+    },
+    "players": {
+      "en": "Players ({count})",
+      "de": "Spieler ({count})",
+      "ja": "プレイヤー（{count}）"
+    },
+    "guest": {
+      "en": "Guest",
+      "de": "Gast",
+      "ja": "ゲスト"
+    },
+    "spectator": {
+      "en": "Spectator",
+      "de": "Zuschauer",
+      "ja": "観戦者"
+    },
+    "ready": {
+      "en": "Ready",
+      "de": "Bereit",
+      "ja": "準備完了"
+    },
+    "inMenu": {
+      "en": "In Menu",
+      "de": "Im Menü",
+      "ja": "メニュー中"
+    },
+    "host": {
+      "en": "Host",
+      "de": "Host",
+      "ja": "ホスト"
+    },
+    "you": {
+      "en": "You",
+      "de": "Du",
+      "ja": "あなた"
+    },
+    "singlePlayerNotice": {
+      "en": "Single-player lobby — you're spectating",
+      "de": "Einzelspieler-Lobby — du schaust zu",
+      "ja": "シングルプレイヤーロビー — 観戦中"
+    },
+    "singlePlayerNoticeBody": {
+      "en": "The host is racing solo (a bot race or time trial), so there are no racer seats to take. You'll be able to drive once the host opens a multiplayer race.",
+      "de": "Der Host fährt allein (ein Bot-Rennen oder Zeitfahren), daher gibt es keine freien Fahrerplätze. Du kannst fahren, sobald der Host ein Mehrspieler-Rennen öffnet.",
+      "ja": "ホストはソロ（ボットレースまたはタイムトライアル）で走っているため、空いている参加枠はありません。ホストがマルチプレイヤーレースを開けば走れるようになります。"
+    },
+    "backRaceSetup": {
+      "en": "← Race Setup",
+      "de": "← Rennvorbereitung",
+      "ja": "← レース設定"
+    },
+    "racerSlotsFull": {
+      "en": "Racer slots full ({max}/{max})",
+      "de": "Fahrerplätze voll ({max}/{max})",
+      "ja": "参加枠が満員（{max}/{max}）"
+    },
+    "joinAsRacer": {
+      "en": "Join as Racer",
+      "de": "Als Fahrer beitreten",
+      "ja": "レーサーとして参加"
+    },
+    "spectate": {
+      "en": "Spectate",
+      "de": "Zuschauen",
+      "ja": "観戦する"
+    },
+    "notReady": {
+      "en": "Not Ready",
+      "de": "Nicht bereit",
+      "ja": "準備解除"
+    },
+    "needAtLeastOneRacer": {
+      "en": "Need at least one racer",
+      "de": "Mindestens ein Fahrer erforderlich",
+      "ja": "レーサーが最低1人必要です"
+    },
+    "waitingForAllReady": {
+      "en": "Waiting for all players to ready up",
+      "de": "Warte, bis alle Spieler bereit sind",
+      "ja": "全員の準備を待っています"
+    },
+    "waitingForHost": {
+      "en": "Waiting for host to start…",
+      "de": "Warte, bis der Host startet…",
+      "ja": "ホストの開始を待っています…"
+    },
+    "raceFinished": {
+      "en": "RACE FINISHED",
+      "de": "RENNEN BEENDET",
+      "ja": "レース終了"
+    },
+    "finished": {
+      "en": "Finished",
+      "de": "Beendet",
+      "ja": "ゴール"
+    },
+    "standings": {
+      "en": "Standings",
+      "de": "Wertung",
+      "ja": "順位"
+    },
+    "lapShort": {
+      "en": "Lap {n}",
+      "de": "Runde {n}",
+      "ja": "ラップ {n}"
+    },
+    "racing": {
+      "en": "Racing",
+      "de": "Im Rennen",
+      "ja": "走行中"
+    },
+    "waiting": {
+      "en": "Waiting…",
+      "de": "Warten…",
+      "ja": "待機中…"
+    },
+    "restart": {
+      "en": "Restart",
+      "de": "Neustart",
+      "ja": "リスタート"
+    },
+    "returnToLobby": {
+      "en": "Return to Lobby",
+      "de": "Zurück zur Lobby",
+      "ja": "ロビーに戻る"
+    },
+    "restartWhenReady": {
+      "en": "Restart begins when all racers are ready",
+      "de": "Neustart beginnt, wenn alle Fahrer bereit sind",
+      "ja": "全レーサーの準備が整うとリスタートします"
+    },
+    "controls": {
+      "en": "Controls",
+      "de": "Steuerung",
+      "ja": "操作方法"
+    },
+    "ctrlAccelerate": {
+      "en": "Accelerate",
+      "de": "Beschleunigen",
+      "ja": "アクセル"
+    },
+    "ctrlReverse": {
+      "en": "Reverse",
+      "de": "Rückwärts",
+      "ja": "バック"
+    },
+    "ctrlSteerLeft": {
+      "en": "Steer left",
+      "de": "Nach links lenken",
+      "ja": "左に曲がる"
+    },
+    "ctrlSteerRight": {
+      "en": "Steer right",
+      "de": "Nach rechts lenken",
+      "ja": "右に曲がる"
+    },
+    "ctrlHandbrake": {
+      "en": "Handbrake / drift",
+      "de": "Handbremse / Drift",
+      "ja": "ハンドブレーキ / ドリフト"
+    },
+    "ctrlSpectatorSwitch": {
+      "en": "Spectator: prev / next car",
+      "de": "Zuschauer: vorheriges / nächstes Auto",
+      "ja": "観戦：前 / 次の車"
+    },
+    "ctrlCamera": {
+      "en": "Toggle camera (close / far / bird)",
+      "de": "Kamera wechseln (nah / fern / Vogel)",
+      "ja": "カメラ切替（近 / 遠 / 俯瞰）"
+    },
+    "ctrlMinimapZoom": {
+      "en": "Cycle minimap zoom",
+      "de": "Minikarten-Zoom wechseln",
+      "ja": "ミニマップのズーム切替"
+    },
+    "ctrlMinimapOrient": {
+      "en": "Toggle minimap orientation",
+      "de": "Minikarten-Ausrichtung umschalten",
+      "ja": "ミニマップの向き切替"
+    },
+    "ctrlHelp": {
+      "en": "Toggle this help screen",
+      "de": "Diesen Hilfebildschirm umschalten",
+      "ja": "このヘルプ画面の表示切替"
+    },
+    "ctrlLeave": {
+      "en": "Leave race (back to dashboard)",
+      "de": "Rennen verlassen (zurück zur Übersicht)",
+      "ja": "レースを退出（ダッシュボードへ）"
+    },
+    "closeHelp": {
+      "en": "[H] close",
+      "de": "[H] schließen",
+      "ja": "[H] 閉じる"
+    },
+    "roomFull": {
+      "en": "ROOM FULL",
+      "de": "RAUM VOLL",
+      "ja": "満員"
+    },
+    "raceIsFull": {
+      "en": "this race is full ({max}/{max})",
+      "de": "dieses Rennen ist voll ({max}/{max})",
+      "ja": "このレースは満員です（{max}/{max}）"
+    },
+    "backToLobbies": {
+      "en": "Back to Lobbies",
+      "de": "Zurück zu den Lobbys",
+      "ja": "ロビー一覧へ戻る"
+    },
+    "leaving": {
+      "en": "LEAVING",
+      "de": "VERLASSEN",
+      "ja": "退出中"
+    },
+    "returningToDashboard": {
+      "en": "returning to dashboard…",
+      "de": "kehre zur Übersicht zurück…",
+      "ja": "ダッシュボードに戻っています…"
+    },
+    "connecting": {
+      "en": "CONNECTING",
+      "de": "VERBINDEN",
+      "ja": "接続中"
+    },
+    "joiningRoom": {
+      "en": "joining room…",
+      "de": "trete Raum bei…",
+      "ja": "ルームに参加中…"
+    },
+    "changingHost": {
+      "en": "Changing host…",
+      "de": "Host wird gewechselt…",
+      "ja": "ホストを変更中…"
+    },
+    "resyncingRace": {
+      "en": "Resyncing the race",
+      "de": "Rennen wird neu synchronisiert",
+      "ja": "レースを再同期中"
+    },
+    "go": {
+      "en": "GO!",
+      "de": "LOS!",
+      "ja": "スタート！"
+    },
+    "preparing": {
+      "en": "PREPARING",
+      "de": "VORBEREITEN",
+      "ja": "準備中"
+    },
+    "waitingForLoad": {
+      "en": "Waiting for all players to load…",
+      "de": "Warte, bis alle Spieler geladen haben…",
+      "ja": "全プレイヤーの読み込みを待っています…"
+    },
+    "newBestLap": {
+      "en": "New best lap",
+      "de": "Neue beste Runde",
+      "ja": "自己ベスト更新"
+    },
+    "slowerThanBest": {
+      "en": "Slower than best",
+      "de": "Langsamer als Bestzeit",
+      "ja": "ベストより遅い"
+    },
+    "wrongWay": {
+      "en": "WRONG WAY",
+      "de": "FALSCHE RICHTUNG",
+      "ja": "逆走"
+    },
+    "fastestOnTrack": {
+      "en": "FASTEST ON TRACK",
+      "de": "SCHNELLSTE/R AUF DER STRECKE",
+      "ja": "コース最速"
+    },
+    "youHoldRecord": {
+      "en": "You hold the record",
+      "de": "Du hältst den Rekord",
+      "ja": "記録保持者はあなた"
+    },
+    "nextRival": {
+      "en": "▲ Next Rival",
+      "de": "▲ Nächster Rivale",
+      "ja": "▲ 次のライバル"
+    },
+    "hudSpeed": {
+      "en": "Speed:",
+      "de": "Tempo:",
+      "ja": "速度："
+    },
+    "hudLap": {
+      "en": "Lap:",
+      "de": "Runde:",
+      "ja": "ラップ："
+    },
+    "hudBest": {
+      "en": "Best:",
+      "de": "Beste:",
+      "ja": "ベスト："
+    },
+    "hudLast": {
+      "en": "Last:",
+      "de": "Letzte:",
+      "ja": "前回："
+    },
+    "botCtrl": {
+      "en": "● BOT CTRL",
+      "de": "● BOT-STRG",
+      "ja": "● ボット操作"
+    },
+    "hudControls": {
+      "en": "[H] controls",
+      "de": "[H] Steuerung",
+      "ja": "[H] 操作方法"
+    },
+    "spectating": {
+      "en": "Spectating",
+      "de": "Zuschauen",
+      "ja": "観戦中"
+    },
+    "noOneToWatch": {
+      "en": "No one to watch",
+      "de": "Niemand zum Zuschauen",
+      "ja": "観戦対象なし"
+    },
+    "switchView": {
+      "en": "[A] / [D] switch view",
+      "de": "[A] / [D] Ansicht wechseln",
+      "ja": "[A] / [D] 視点切替"
+    },
+    "leaveRace": {
+      "en": "Leave race?",
+      "de": "Rennen verlassen?",
+      "ja": "レースを退出しますか？"
+    },
+    "returnToDashboardQ": {
+      "en": "Return to dashboard?",
+      "de": "Zur Übersicht zurückkehren?",
+      "ja": "ダッシュボードに戻りますか？"
+    },
+    "yesLeave": {
+      "en": "Yes, leave",
+      "de": "Ja, verlassen",
+      "ja": "はい、退出する"
+    },
+    "yesExit": {
+      "en": "Yes, exit",
+      "de": "Ja, beenden",
+      "ja": "はい、終了する"
+    },
+    "noStay": {
+      "en": "No, stay",
+      "de": "Nein, bleiben",
+      "ja": "いいえ、留まる"
+    },
+    "escCancel": {
+      "en": "[Esc] cancel",
+      "de": "[Esc] abbrechen",
+      "ja": "[Esc] キャンセル"
+    },
+    "leaveSetupMsg": {
+      "en": "You'll leave setup and return to the dashboard.",
+      "de": "Du verlässt die Vorbereitung und kehrst zur Übersicht zurück.",
+      "ja": "設定を離れてダッシュボードに戻ります。"
+    },
+    "returnToLobbyMsg": {
+      "en": "You'll return to the lobby.",
+      "de": "Du kehrst zur Lobby zurück.",
+      "ja": "ロビーに戻ります。"
+    },
+    "returnToSetupMsg": {
+      "en": "You'll return to the setup menu.",
+      "de": "Du kehrst zum Vorbereitungsmenü zurück.",
+      "ja": "設定メニューに戻ります。"
+    },
+    "leaveRoomMsg": {
+      "en": "You'll leave the room and return to the dashboard.",
+      "de": "Du verlässt den Raum und kehrst zur Übersicht zurück.",
+      "ja": "ルームを退出してダッシュボードに戻ります。"
+    },
+    "lapCountOne": {
+      "en": "{count} lap",
+      "de": "{count} Runde",
+      "ja": "{count} ラップ"
+    },
+    "lapCountMany": {
+      "en": "{count} laps",
+      "de": "{count} Runden",
+      "ja": "{count} ラップ"
+    },
+    "fewerLaps": {
+      "en": "Fewer laps",
+      "de": "Weniger Runden",
+      "ja": "ラップを減らす"
+    },
+    "moreLaps": {
+      "en": "More laps",
+      "de": "Mehr Runden",
+      "ja": "ラップを増やす"
+    }
+  }
+}

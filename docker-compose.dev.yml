@@ -1,0 +1,95 @@
+#-------------------------------------------------------------------------------#
+# docker-compose.dev.yml - DEVELOPMENT DOCKER COMPOSE CONFIGURATION             #
+#                                                                               #
+# Only for development purposes. This file is used to override the default      #
+# docker-compose.yml file with development-specific settings.                   #
+#                                                                               #
+# Usage:                                                                        #
+#  make dev                                                                     #
+#                                                                               #
+#  What changes vs production:                                                  #
+#   - nginx disabled                                                            #
+#   - db port exposed to host                                                   #
+#   - source code mounted as volume for local development                       #
+#-------------------------------------------------------------------------------#
+
+services:
+
+#---------------------------NGINX-----------------------------#
+  nginx:
+    # Disable nginx in development
+    profiles:
+      - prod-only
+    command: echo "Nginx is disabled in development mode."
+
+  vault:
+    profiles:
+      - prod-only
+    command: echo "Vault is disabled in development mode."
+
+  vault-init:
+    profiles:
+      - prod-only
+    command: echo "Vault initialization is disabled in development mode."
+
+  vault-agent:
+    profiles:
+      - prod-only
+    command: echo "Vault agent is disabled in development mode."
+
+#---------------------------FRONTEND-------------------------#
+  frontend:
+    build:
+      context: .
+      target: dev
+      dockerfile: frontend/Dockerfile
+
+    environment:
+      VITE_API_URL: http://localhost:3000
+      VITE_WS_URL: ws://localhost:3000
+
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5173/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+#---------------------------BACKEND--------------------------#
+  backend:
+    build:
+      dockerfile: Dockerfile
+      target: dev
+      args: {}
+    environment:
+      NODE_ENV: dev
+      DATABASE_URL: postgresql://user:password@db:5432/tr_db
+      JWT_SECRET: dev_jwt_secret_change_in_prod
+      JWT_REFRESH_SECRET: dev_jwt_refresh_secret_change_in_prod
+    command: ["./backend/ENTRYPOINT.sh"]
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - backend_module:/app/node_modules
+    ports:
+      - "3000:3000"
+
+#---------------------------DATABASE-------------------------#
+  db:
+    ports:
+      - "5432:5432"
+
+#---------------------------VOLUMES--------------------------#
+volumes:
+  # frontend_module:
+  #   name: frontend_module
+  backend_module:
+    name: backend_module

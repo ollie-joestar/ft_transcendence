@@ -1,0 +1,331 @@
+# ───────────────────────────────────────────────────────────────────────────────────── #
+# docker-compose.yml - PRODUCTION                                                       #
+# ───────────────────────────────────────────────────────────────────────────────────── #
+#
+#  Nginx (OWASP WAF) + Vault secrets manager added.
+#  Cybersecurity major: ModSecurity/WAF + HashiCorp Vault
+#
+#  Current status:
+#    - Nginx/ModSecurity WAF is active at the edge.
+#    - Vault runs in production mode with file-backed persistent storage.
+#    - vault-init initialises, unseals and seeds secret/backend.
+#    - Vault Agent renders secrets into a shared volume for backend consumption.
+#    - Backend mounts that shared volume read-only at /secrets.
+# ───────────────────────────────────────────────────────────────────────────────────── #
+# Usage:                                                                                #
+#   make prod up:      start production environment                                     #
+#   make prod down:    stop and remove containers, networks and volumes                 #
+# ───────────────────────────────────────────────────────────────────────────────────── #
+
+services:
+
+# ─── WAF + NGINX ──────────────────────────────────────────────────────────────────────
+
+  nginx:
+    container_name: nginx
+    image: owasp/modsecurity-crs:nginx-alpine   # = nginx + libmodsecurity3 + CRS rules
+    networks:
+      - app_network
+      - public_network
+    environment:
+      PARANOIA: 1             # PL1 = baseline security (common attack patterns)
+      ANOMALY_INBOUND: 5      # moderate inbound blocking threshold (tuned to reduce false positives)
+      ANOMALY_OUTBOUND: 2     # moderate outbound blocking threshold
+      BLOCKING_PARANOIA: 1    # rules up to this PL actively block
+      MODSEC_AUDIT_LOG_FORMAT: JSON    # emit audit log entries as JSON
+      BACKEND: "http://backend:3000"   # tells OWASP image where to proxy requests (backend service in app network)
+      PORT: 8080              # tells OWASP image which port the server{} block listens to
+      SSL_PORT: 8443          # HTTPS listener handled by OWASP image startup templates
+      SSL_CERT: "/etc/nginx/conf/server.crt"   # image-managed generated cert path
+      SSL_KEY: "/etc/nginx/conf/server.key"    # image-managed generated key path
+
+    depends_on:
+      - frontend
+      - backend
+        # condition: service_healthy
+    restart : always
+    ports :
+      - "0.0.0.0:8080:8080"   #  HTTP entrypoint
+      - "0.0.0.0:8443:8443"   #  HTTPS entrypoint
+    volumes:
+      # [WAF] Mount target path to the OWASP image's template directory.
+      # The image processes files here with envsubst at startup and writes results to
+      # /etc/nginx/conf.d/ (its own nginx.conf containing the ModSecurity directives).
+      # Mounting into /etc/nginx/nginx.conf directly would overwrite the ModSecurity wiring
+      # and silently disable the WAF.
+      - ./nginx/conf/nginx.conf:/etc/nginx/templates/conf.d/default.conf.template:ro
+      - ./nginx/modsec/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf:/etc/modsecurity.d/owasp-crs/rules/RESPONSE-999-EXCLUSION-RULES-AFTER-CRS.conf:ro
+    healthcheck:
+      test: ["CMD", "curl", "-k", "-f", "https://127.0.0.1:8443/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    profiles:
+      - prod-only
+
+
+# ─── VAULT ────────────────────────────────────────────────────────────────────────────
+#
+#  Vault is the single source of truth for secrets. It runs in production mode and keeps
+#  data in a persistent volume so state survives container restarts.
+#  vault-init performs one-time initialisation, unseal and seeding for local workflow.
+
+  vault:
+    container_name: vault
+    build:
+      context: ./vault                  # build custom Vault image with TLS capable entrypoint
+      dockerfile: Dockerfile
+    image: transcendence-vault          # shared image for vault, vault-init and vault-agent
+    user: "0:0"                    # local named volume ownership requires root write to /vault/data
+    networks:
+      - app_network
+    command: ["server", "-config=/vault/server.hcl"]  # production mode server config
+    environment:
+      VAULT_ADDR: "https://0.0.0.0:8200"  # TLS Vault API address for local compose network
+      VAULT_CACERT: "/vault/tls/ca.crt"   # generated at runtime by vault entrypoint wrapper
+    cap_add:
+      - IPC_LOCK                          # allow mlock-related behavior expected by Vault
+    cap_drop:
+      - ALL                               # drop every capability except explicit cap_add list
+    security_opt:
+      - no-new-privileges:true            # prevent privilege escalation inside container
+    volumes:
+      - vault_data:/vault/data            # persistent Vault storage
+      - ./vault/server.hcl:/vault/server.hcl:ro   # vault production mode config
+      - vault_tls:/vault/tls              # runtime generated TLS cert and key material
+    ports:
+      - "127.0.0.1:8200:8200"             # expose Vault only on localhost for local verification
+    healthcheck:
+      test: ["CMD-SHELL", "VAULT_ADDR=https://127.0.0.1:8200 VAULT_CACERT=/vault/tls/ca.crt vault status >/dev/null 2>&1; c=$$?; [ $$c -eq 0 ] || [ $$c -eq 2 ]"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: always
+    profiles:
+      - prod-only
+
+
+# ─── VAULT SECRET INIT (bootstrap) ────────────────────────────────────────────────────
+#
+#  vault-init initialises, unseals and seeds Vault.
+
+  vault-init:
+    container_name: vault-init            # fixed name for logs/debugging
+    build:                                # build-block so docker compose knows transcendence-vault
+      context: ./vault                    #  is a locally built image and doesn't try to pull from
+      dockerfile: Dockerfile              #  Docker Hub
+    image: transcendence-vault            # reuse custom Vault image and bundled init script
+    user: "0:0"                           # writes bootstrap init file into mounted volume
+    networks:
+      - app_network                       # must reach the vault service over app network
+    depends_on:
+      vault:
+        condition: service_started        # vault process must be running before init/unseal
+    env_file: .env                        # read POSTGRES_* values for DATABASE_URL construction
+    entrypoint: ["/bin/sh", "/vault/scripts/init-vault.sh"]  # run one shot init script from image
+    cap_drop:
+      - ALL                               # no Linux capabilities required for this bootstrap task
+    security_opt:
+      - no-new-privileges:true            # block privilege escalation
+    volumes:
+      - vault_bootstrap:/vault/bootstrap    # persist init/unseal credentials across restarts
+      - vault_tls:/vault/tls:ro             # trust vault TLS CA generated by vault service
+
+    restart: no                             # remains set to 'no' (one shot bootstrap task)
+    profiles:
+      - prod-only
+
+# ─── VAULT AGENT (secrets renderer) ───────────────────────────────────────────────────
+#
+#  Vault Agent authenticates to Vault using /vault/bootstrap/root-token,
+#  reads secret/data/backend and renders /secrets/backend.env from:
+#    - /vault/agent.hcl
+#    - /vault/backend.env.ctmpl
+#  Backend mounts /secrets read-only and does not talk to Vault directly.
+#
+# Verification:
+#   make verify
+#
+# Expected results:
+#   - vault-init generates JWT secrets via Vault random API (no openssl required)
+#   - vault-init writes secret/backend with JWT_SECRET, JWT_REFRESH_SECRET, DATABASE_URL
+#   - vault-agent renders /secrets/backend.env without auth or permission errors
+#   - backend sees the same rendered file through read-only mount
+#   - rendered file contains non-empty values for all three keys
+
+  vault-agent:
+    container_name: vault-agent
+    build:
+      context: ./vault
+      dockerfile: Dockerfile
+    image: transcendence-vault            # reuse custom Vault image with wrapper entrypoint
+    user: "0:0"           # local volume ownership currently requires root writes in /secrets
+    networks:
+      - app_network
+    depends_on:
+      vault-init:
+        condition: service_completed_successfully    # render only after the seed secret exists
+    command: ["agent", "-config=/vault/agent.hcl"]  # load mounted Vault Agent config
+    environment:
+      VAULT_ADDR: "https://vault:8200"    # in-cluster Vault address used by Vault Agent
+      VAULT_CACERT: "/vault/tls/ca.crt"
+    cap_drop:
+      - ALL                               # agent does not need elevated Linux capabilities
+    security_opt:
+      - no-new-privileges:true            # block privilege escalation
+    volumes:
+      - secrets_vol:/secrets              # shared volume where rendered secrets file is written
+      - ./vault/agent.hcl:/vault/agent.hcl:ro   # agent runtime configuration
+      - ./vault/backend.env.ctmpl:/vault/backend.env.ctmpl:ro   # template rendered to /secrets
+      - vault_tls:/vault/tls:ro           # trust vault TLS CA certificate
+      - vault_bootstrap:/vault/bootstrap:ro  # read current root token generated by vault-init
+    restart: always
+    profiles:
+      - prod-only
+
+# ─── FRONTEND ─────────────────────────────────────────────────────────────────────────
+
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: ./frontend/Dockerfile
+      target: production
+      network: host
+    restart : always
+    depends_on:
+      - backend
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    # volumes:
+    #   - frontend_module:/app/dist
+
+
+# ─── BACKEND  ─────────────────────────────────────────────────────────────────────────
+
+  backend:
+    container_name: backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: production
+      network: host
+    networks:
+      - app_network
+      - db_network
+      # - ai_network
+    restart : always
+    environment:
+      # DATABASE_URL is sourced from Vault via /secrets/backend.env in ENTRYPOINT.sh.
+      NODE_ENV: prod
+      # VAULT_ADDR removed (backend never talks to Vault directly, Vault agent handles comm)
+    depends_on:
+      db:
+        condition: service_healthy
+      # vault-agent:
+      #   condition: service_started         # file readiness handled by wait loop in ENTRYPOINT.sh
+    volumes:
+      - secrets_vol:/secrets:ro            # backend reads Vault-injected secrets here
+    #   - backend_module:/app/node_modules
+    healthcheck:
+      start_period: 120s
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+
+# ─── DATABASE  ─────────────────────────────────────────────────────────────────────────
+
+  db:
+    container_name: db
+    image: postgres:18
+    networks:
+      - db_network
+    restart : always
+    env_file: .env
+    # ports :
+    #   - "127.0.0.1:5432:5432"             #  localhost-only PostgreSQL access
+    expose:
+      - "5432"
+    volumes:
+      - db_data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "user", "-d", "tr_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+
+# --------------- GAME SERVICE ---------------
+  # game_service:
+  #   container_name: game_service
+  #   build: ./game_service
+  #   dockerfile: Dockerfile
+  #   networks:
+  #     - app_network
+  #   restart : always
+  #   env_file: .env
+  #   ports :
+      # To be updated
+
+# --------------- AI SERVICE ---------------
+  # ai_service:
+  #   container_name: ai_service
+  #   image: golang:1.26.1
+  #   dockerfile: Dockerfile
+  #   networks:
+  #     - ai_network
+  #   restart : always
+  #   env_file: .env
+    # ports :
+      # To be updated
+
+# --------------- RESERVED SERVICE (FOR DOM) ---------------
+  # reserved_service:
+  #   container_name: reserved_service
+    # image: bullshit:latest
+    # dockerfile: Dockerfile
+    # networks:
+    #   - ai_network
+    # restart : always
+    # env_file: .env
+    # ports :
+      # To be updated
+
+volumes:
+  db_data:
+    name: db_data
+  vault_data:
+    name: vault_data
+  vault_tls:
+    name: vault_tls
+  vault_bootstrap:
+    name: vault_bootstrap
+  secrets_vol:
+    name: secrets_vol      # tmpfs would be ideal, named volume is simpler cross-platform
+  # frontend_module:
+  #   name: frontend_module
+  # backend_module:
+  #   name: backend_module
+
+networks:
+  public_network:
+    name: public_network
+    driver: bridge
+  app_network:
+    name: app_network
+    driver: bridge
+  db_network:
+    name: db_network
+    driver: bridge
+  # ai_network:
+  #   name: ai_network
+  #   driver: bridge

@@ -1,0 +1,10 @@
+*.env
+nginx/certs/*
+frontend/.env.example
+frontend/node_modules/
+*.DS_Store
+*.bin
+CLAUDE.md
+TODO.md
+TESTING.md
+

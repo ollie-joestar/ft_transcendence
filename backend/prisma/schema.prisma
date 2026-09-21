@@ -1,0 +1,145 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider     = "prisma-client-js"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String       @id @default(uuid())
+  email        String       @unique
+  username     String       @unique
+  passwordHash String
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  // Aggregate driving counters, incremented once per completed lap (every mode:
+  // bot / multiplayer / time-trial / free-roam). Kept as running totals rather
+  // than derived from race_results because not every lap creates a result row.
+  lapsCompleted   Int          @default(0) // total finish-line crossings ever
+  totalTimeSec    Int          @default(0) // cumulative lap time, in seconds (imprecise by design)
+  totalDriftM     Int          @default(0) // cumulative drift distance, in metres (complete laps only)
+  raceResults  RaceResult[] // one row per finished race, see RaceResult below
+  lobbies      Lobby[] // active multiplayer lobbies this user is hosting
+  // ^^^^^ Remember to implement this!!! makes searching for users by username much faster
+  sentMessages     Message[] @relation("SentMessages")
+  receivedMessages Message[] @relation("ReceivedMessages")
+
+  sentFriendRequests     Friendship[] @relation("SentFriendRequests")
+  receivedFriendRequests Friendship[] @relation("ReceivedFriendRequests")
+
+  @@index([username])
+  // stats		UserStats @relation("UserStats", fields: [id], references: [userId])
+  @@map("users") // maps this model to the "users" table in the database
+}
+
+model Friendship {
+  id          String           @id @default(uuid())
+  requesterId String
+  addresseeId String
+  status      FriendshipStatus @default(PENDING)   // PENDING | ACCEPTED | BLOCKED
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  requester User @relation("SentFriendRequests",     fields: [requesterId], references: [id], onDelete: Cascade)
+  addressee User @relation("ReceivedFriendRequests", fields: [addresseeId], references: [id], onDelete: Cascade)
+  @@unique([requesterId, addresseeId])  // one row per direction
+  @@index([addresseeId, status])        // my incoming requests / my friends
+  @@map("friendships")
+}
+
+model Match {
+  id        String      @id @default(uuid())
+  status    MatchStatus @default(WAITING)
+  mode      MatchMode   @default(NORMAL)
+  homeTeam  String
+  awayTeam  String
+  date      DateTime
+  createdAt DateTime    @default(now())
+  updatedAt DateTime    @updatedAt
+}
+
+model Message {
+  id              String    @id @default(uuid())
+  conversationKey String    // sorted "minUserId:maxUserId" — the whole thread
+  senderId        String
+  receiverId      String
+  body            String
+  readAt          DateTime? // null until the receiver has seen it
+  createdAt       DateTime  @default(now())
+
+  sender   User @relation("SentMessages",     fields: [senderId],   references: [id], onDelete: Cascade)
+  receiver User @relation("ReceivedMessages", fields: [receiverId], references: [id], onDelete: Cascade)
+
+  @@index([conversationKey, createdAt]) // fetch a thread newest-first + paginate
+  @@index([receiverId, readAt])         // unread badge counts per user
+  @@map("messages")
+}
+
+// One row per finished race (append-only history). Personal bests, the per-track
+// leaderboard, and profile stats are all derived from these rows — nothing is
+// stored pre-aggregated, so a profile can show full history, not just one result.
+model RaceResult {
+  id         String    @id @default(uuid())
+  userId     String
+  track      String
+  lapTimeMs  Int // best single lap of this race — the leaderboard metric
+  raceTimeMs Int? // total race time; null for free-roam / no finish
+  position   Int? // finishing place; null for solo runs
+  mode       MatchMode @default(NORMAL)
+  trial      Boolean   @default(false) // time-trial lap: counts for PB/leaderboard but not race history/stats
+  createdAt  DateTime  @default(now())
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt]) // profile history (recent-first per user)
+  @@index([track, lapTimeMs]) // leaderboard sort (best laps per track)
+  @@map("race_results")
+}
+
+// One row per live multiplayer lobby (PlayroomKit room). Announced/refreshed by
+// the room host via POST /lobbies/heartbeat and read by the dashboard lobby
+// browser. Rows not heartbeated within the staleness window are reaped, so this
+// table reflects *currently active* lobbies — it is not a permanent history.
+model Lobby {
+  roomCode    String   @id // PlayroomKit room code (the "#r=" join token)
+  hostUserId  String // host's user id (from the JWT, never the body)
+  hostName    String // host username, denormalized for display
+  track       String // active track name
+  phase       String   @default("lobby") // "lobby" | "racing"
+  playerCount Int      @default(1) // total players present (racers + spectators)
+  racerCount  Int      @default(1) // non-spectator drivers (vs maxRacers cap)
+  maxRacers   Int      @default(8) // racer cap; overflow joins as spectators
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt // staleness clock — drives reaping
+  host        User     @relation(fields: [hostUserId], references: [id], onDelete: Cascade)
+
+  @@index([updatedAt]) // active-lobby filter + reaper sweep
+  @@map("lobbies")
+}
+
+enum MatchStatus {
+  WAITING
+  IN_PROGRESS
+  COMPLETED
+  INTERRUPTED
+}
+
+enum MatchMode {
+  NORMAL
+  RANKED
+  AI
+  TOURNAMENT
+}
+
+enum FriendshipStatus {
+  PENDING
+  ACCEPTED
+  BLOCKED
+}
